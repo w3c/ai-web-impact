@@ -13,7 +13,62 @@
     status: "UD",
     editors: [ {name: "Dominique Hazael-Massieux", email: "dom@w3.org"}],
     latestVersion: null,
-
+    localBiblio: {
+	"ISO/IEC-22989": {
+	    href: "https://www.iso.org/standard/74296.html",
+	    title: "Artificial intelligence concepts and terminology",
+            "status": "Published",
+            "publisher": "ISO/IEC",
+            "isoNumber": "ISO 22989:2022",
+            "date": "July 2022"
+	},
+	"C2PA-AI": {
+	    href: "https://c2pa.org/specifications/specifications/1.3/ai-ml/ai_ml.html",
+	    title: "Guidance for Artificial Intelligence and Machine Learning",
+	    publisher: "C2PA"
+	},
+	"IPTC-DST": {
+	    title: "Digital Source Type vocabulary",
+	    href: "https://cv.iptc.org/newscodes/digitalsourcetype/",
+	    publisher: "IPTC"
+	},
+	"UNESCO-AI": {
+	    "href": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
+	    "title": "Recommendation on the Ethics of Artificial Intelligence",
+	    "publisher": "UNESCO",
+	    "date": "2021"
+	},
+	"WAI-AI": {
+	    title: "Artificial Intelligence (AI) and Accessibility Research Symposium 2023",
+	    href: "https://www.w3.org/WAI/research/ai2023/",
+	    publisher: "W3C Web Accessibility Initiative",
+	    date: "Jan 2023"
+	},
+	"MODEL-CARDS": {
+	    title: "Model Cards for Model Reporting",
+	    href: "https://arxiv.org/pdf/1810.03993.pdf",
+	    authors: ["M. Mitchell", "S. Wu", "A. Zaldivar", "P. Barnes", "L. Vasserman", "B. Hutchinson", "E. Spitzer", "I. Deborah Raji", "T. Gebru"],
+	    date: "14 Juan 2019"
+	},
+	"W3C-ML-WS": {
+	    "title": "W3C Workshop Report on Web and Machine Learning",
+	    href: "https://www.w3.org/2020/06/machine-learning-workshop/report.html",
+	    publisher: "W3C",
+	    date: "October 2020"
+	},
+	"DIGITAL-CREDENTIALS": {
+	    href: "https://wicg.github.io/digital-identities/",
+	    title: "Digital Credentials",
+	    publisher: "WICG",
+	    date: "March 2024"
+	},
+	"TDMRep": {
+	    href: "https://www.w3.org/community/reports/tdmrep/CG-FINAL-tdmrep-20240202/",
+	    title: "Final Community Group Report",
+	    date: "February 2024",
+	    publisher: "Text and Data Mining Reservation Protocol Community Group"
+	}
+    },
     github: "https://github.com/w3c/ai-web-impact"
 }</script>
 
@@ -65,7 +120,7 @@ That current understanding is bound to be incomplete or sometimes plain wrong; w
 
 
 <p>
-The term "Artificial Intelligence" covers a very broad spectrum of algorithms, techniques and technologies. ISO/IEC 22989 defines <dfn>Artificial Intelligence</dfn> as "research and development of mechanisms and applications of [=AI systems=]", with <dfn data-lt="Artificial Intelligence system">AI system</dfn>s being "an engineered system that generates outputs such as content, forecasts, recommendations or decisions for a given set of human-defined objectives". At the time of the writing of this document in early 2024, the gist of the Web ecosystem conversation on Artificial Intelligence is mostly about systems based on <dfn>Machine Learning</dfn> ("process of optimizing model parameters through computational techniques, such that the model's behavior reflects the data or experience") and its software manifestation, <dfn data-lt="model">Machine Learning model</dfn>s ("mathematical construct that generates an inference or prediction based on input data or information").
+The term "Artificial Intelligence" covers a very broad spectrum of algorithms, techniques and technologies. [[ISO/IEC-22989]] defines <dfn>Artificial Intelligence</dfn> as "research and development of mechanisms and applications of [=AI systems=]", with <dfn data-lt="Artificial Intelligence system">AI system</dfn>s being "an engineered system that generates outputs such as content, forecasts, recommendations or decisions for a given set of human-defined objectives". At the time of the writing of this document in early 2024, the gist of the Web ecosystem conversation on Artificial Intelligence is mostly about systems based on <dfn>Machine Learning</dfn> ("process of optimizing model parameters through computational techniques, such that the model's behavior reflects the data or experience") and its software manifestation, <dfn data-lt="model">Machine Learning model</dfn>s ("mathematical construct that generates an inference or prediction based on input data or information").
 </p>
 <p>
 While we acknowledge the much broader meaning of Artificial Intelligence and its intersection with a number of other Web- and W3C-related activities (e.g., the Semantic Web and Linked Data), this document willfully focuses only on the current conversation around the impact that these [=Machine Learning models=] are bringing to the Web. We further acknowledge that this document has been developed during, and is partially a response to, a cycle of inflated expectations and investments in that space.That situation underlines the need for a framework to structure the conversation.
@@ -101,13 +156,13 @@ It's also worth noting that as [=AI systems=] are gaining rapid adoption, their 
 
 
 <p>
-The <a href="https://www.w3.org/TR/ethical-web-principles/">W3C's Technical Architecture Group Ethical Web Principles</a> includes ensuring "<a href="https://www.w3.org/TR/ethical-web-principles/#noharm">the Web should not cause harm to society</a>".
+The <a href="https://www.w3.org/TR/ethical-web-principles/">W3C's Technical Architecture Group Ethical Web Principles</a> [[ethical-web-principles]] includes ensuring "<a href="https://www.w3.org/TR/ethical-web-principles/#noharm">the Web should not cause harm to society</a>".
 </p>
 <p>
 As described above, the Web is already a key enabler in some of the recent developments in Artificial Intelligence, and the usage and impact of Artificial Intelligence is being multiplied in scale through its distribution via the Web. This calls for the W3C community as stewards of the Web to understand potential harms emerging from that combination and to identify potential mitigations to these harms.
 </p>
 <p>
-The <a href="https://www.w3.org/TR/webmachinelearning-ethics/">Ethical Principles for Web Machine Learning</a> started in the <a href="https://www.w3.org/groups/wg/webmachinelearning">Web Machine Learning Working Group</a> combine values and principles from the UNESCO <a href="https://unesdoc.unesco.org/ark:/48223/pf0000380455">Recommendation on the Ethics of Artificial Intelligence</a> with Web-specific principles from the Ethical Web Principles to identify 4 values and 11 principles that integration of Machine Learning on the Web should follow, and which have helped structure this document.
+The <a href="https://www.w3.org/TR/webmachinelearning-ethics/">Ethical Principles for Web Machine Learning</a> [[webmachinelearning-ethics]] started in the <a href="https://www.w3.org/groups/wg/webmachinelearning">Web Machine Learning Working Group</a> combine values and principles from the UNESCO <a href="https://unesdoc.unesco.org/ark:/48223/pf0000380455">Recommendation on the Ethics of Artificial Intelligence</a> [[UNESCO-AI]] with Web-specific principles from the Ethical Web Principles to identify 4 values and 11 principles that integration of Machine Learning on the Web should follow, and which have helped structure this document.
 </p>
 <section>
 <h3>Respecting <a href="https://www.w3.org/TR/webmachinelearning-ethics/#principle-3-autonomy">autonomy</a> and <a href="https://www.w3.org/TR/webmachinelearning-ethics/#principle-6-transparency-and-explainability">transparency</a></h3>
@@ -133,11 +188,11 @@ A number of proposals have already emerged in this space, which may benefit from
 </p>
 <ul>
 
-<li><a href="https://c2pa.org/specifications/specifications/1.3/ai-ml/ai_ml.html">C2PA Guidance for AI and Machine Learning</a>
+<li><a href="https://c2pa.org/specifications/specifications/1.3/ai-ml/ai_ml.html">C2PA Guidance for AI and Machine Learning</a> [[C2PA-AI]]
 
-<li><a href="https://iptc.org/news/iptc-releases-draft-of-digital-source-type-vocabulary-to-support-synthetic-media/">IPTC synthetic media</a> and its matching representation in <a href="https://github.com/schemaorg/schemaorg/issues/3392">Schema.org</a>
+<li><a href="https://iptc.org/news/iptc-releases-draft-of-digital-source-type-vocabulary-to-support-synthetic-media/">IPTC synthetic media</a> [[IPTC-DST]] and its matching representation in <a href="https://github.com/schemaorg/schemaorg/issues/3392">Schema.org</a> [[schema-org]]
 
-<li><a href="https://github.com/whatwg/html/issues/9479">Proposal: Meta Tag for AI Generated Content</a> in HTML (individual submission)
+<li><a href="https://github.com/whatwg/html/issues/9479">Proposal: Meta Tag for AI Generated Content</a> in [[HTML]] (individual submission)
 </li>
 </ul>
 </section>
@@ -149,23 +204,23 @@ A number of proposals have already emerged in this space, which may benefit from
 A well-known issue with relying operationally on [=Machine Learning models=] is that they will integrate and possibly strengthen any <a href="https://www.w3.org/TR/webmachinelearning-ethics/#bias">bias</a> in the data that was used during their [=training=]. Bias commonly occurs in other algorithms and human decision processes. Where [=AI systems=] make that bias a bigger challenge is because these models are at this point harder to audit and amend since they operate mostly as a closed box.
 </p>
 <p>
-Such bias will disproportionately affect users whose expected input or output is less well represented in training data (as e.g., discussed in the <a href="https://www.w3.org/WAI/research/ai2023/">report from the 2023 AI & Accessibility research symposium</a>), which intuitively is likely to correlate strongly with users already disenfranchised by society and technology - e.g., if your language, appearance or behavior doesn't fit the mainstream-expected norm, you're less likely to feature in mainstream content and thus less visible in training data.
+Such bias will disproportionately affect users whose expected input or output is less well represented in training data (as e.g., discussed in the <a href="https://www.w3.org/WAI/research/ai2023/">report from the 2023 AI & Accessibility research symposium</a> [[WAI-AI]]), which intuitively is likely to correlate strongly with users already disenfranchised by society and technology - e.g., if your language, appearance or behavior doesn't fit the mainstream-expected norm, you're less likely to feature in mainstream content and thus less visible in training data.
 </p>
 <p>
 Until better tools emerge to facilitate at least the systematic detection of such bias, encouraging and facilitating the systematic publication of information on whether a Machine Learning model is in use, and how such a model was trained and checked for bias may help end- users make more informed choices about the services they use (which, of course, only helps if they have a choice in the first place, which may not apply e.g., to some government-provided services). 
 </p>
 <div class=advisement>
 <p>
-<a href="https://arxiv.org/pdf/1810.03993.pdf">Model cards for Model Reporting</a> are one of the approaches that were <a href="https://www.w3.org/2020/06/machine-learning-workshop/report.html#user">discussed in the 2020 W3C Workshop on Web and Machine Learning</a>. Assuming this reporting provides meaningful and actionable transparency, a question for (the) technical standardization would be how such cards should be serialized and made discoverable on the Web.
+<a href="https://arxiv.org/pdf/1810.03993.pdf">Model cards for Model Reporting</a> [[MODEL-CARDS]] are one of the approaches that were <a href="https://www.w3.org/2020/06/machine-learning-workshop/report.html#user">discussed in the 2020 W3C Workshop on Web and Machine Learning</a> [[W3C-ML-WS]]. Assuming this reporting provides meaningful and actionable transparency, a question for (the) technical standardization would be how such cards should be serialized and made discoverable on the Web.
 </p>
 <p>
 W3C should look at a particular category of model deployments: models that are used by browser engines themselves to fulfill API requests. A number of Web browser APIs already expose (more or less explicitly) output of [=Machine Learning models=]:
 </p>
 <ul>
 
-<li><a href="https://wicg.github.io/speech-api/">Web Speech API</a>
+<li><a href="https://wicg.github.io/speech-api/">Web Speech API</a> [[SPEECH-API]]
 
-<li><a href="https://wicg.github.io/shape-detection-api/">Accelerated Shape Detection API</a>
+<li><a href="https://wicg.github.io/shape-detection-api/">Accelerated Shape Detection API</a> [[SHAPE-DETECTION-API]]
 
 <li><a href="https://w3c.github.io/mediacapture-extensions/#exposing-mediastreamtrack-source-background-blur-support">Background blur, face detection, gaze correction controls in Media capture</a>
 </li>
@@ -199,7 +254,7 @@ That topic has most recently surfaced in W3C through the <a href="https://lists.
 </div>
 
 <p>
-Allowing to [=run=] a model on personal data without uploading that data to a server is one of the key motivations behind the browser <a href="https://www.w3.org/TR/webnn/">Web Neural Network API</a> which, completing the computing capabilities already provided by <a href="https://www.w3.org/groups/wg/wasm/">WebAssembly</a> and <a href="https://www.w3.org/groups/wg/gpu/">WebGPU</a>, provides additional Machine Learning specific optimizations to [=run=] models efficiently from within the browser (and thus, on the end-user device). 
+Allowing to [=run=] a model on personal data without uploading that data to a server is one of the key motivations behind the browser <a href="https://www.w3.org/TR/webnn/">Web Neural Network API</a> [[WEBNN]] which, completing the computing capabilities already provided by <a href="https://www.w3.org/groups/wg/wasm/">WebAssembly</a> [[WASM-CORE-2]] and <a href="https://www.w3.org/groups/wg/gpu/">WebGPU</a> [[WEBGPU]], provides additional Machine Learning specific optimizations to [=run=] models efficiently from within the browser (and thus, on the end-user device). 
 </p>
 </section>
 <section>
@@ -211,7 +266,7 @@ A number of [=Machine Learning models=] have significantly lowered the cost of g
 </p>
 <div class=advisement>
 <p>
-This points towards even stronger needs for robust identity and credential management on the Web. The work of the <a href="https://www.w3.org/2017/vc/WG/">Verifiable Credentials Working Group</a> allows to express credentials in a cryptographically secure, privacy-preserving, and machine-verifiable way. The <a href="https://lists.w3.org/Archives/Public/public-new-work/2024Jan/0006.html">proposed work to better integrate Federated Identity systems into browsers</a> and the <a href="https://wicg.github.io/digital-identities/">emerging one on surfacing digital credentials to Web content</a> are likely part of mitigating the risks associated with these new impersonation threats.
+This points towards even stronger needs for robust identity and credential management on the Web. The work of the <a href="https://www.w3.org/2017/vc/WG/">Verifiable Credentials Working Group</a> allows to express credentials in a cryptographically secure, privacy-preserving, and machine-verifiable way [[VC-DATA-MODEL]]. The <a href="https://lists.w3.org/Archives/Public/public-new-work/2024Jan/0006.html">proposed work to better integrate Federated Identity systems into browsers</a> [[FEDCM]] and the <a href="https://wicg.github.io/digital-identities/">emerging one on surfacing digital credentials to Web content</a> [[DIGITAL-CREDENTIALS]] are likely part of mitigating the risks associated with these new impersonation threats.
 </p>
 </div>
 </section>
@@ -268,7 +323,7 @@ A less direct risk may emerge from changes in copyright laws meant to help to re
 A number of the tensions emerging around the re-use of content crawled at scale from the Web have a long history given the central role that search engines play for the Web. Indeed, search engines provide (and absorb) value from their ability to retrieve and organize information from content on the Web, and they heavily rely on the standardized infrastructure this content is built on to achieve these results.
 </p>
 <p>
-The more or less implicit contract that emerged between search engines and content providers has been that search engines can retrieve, parse and partially display content from the providers, in exchange of bringing more visibility and traffic to them. A further assumption has been encoded in the way the Web operates that this contract is the default for anyone making content available publicly on the Web, with an opt-out mechanism encoded via the <a href="https://www.rfc-editor.org/rfc/rfc9309.html"><code>robots.txt</code> directives</a>.
+The more or less implicit contract that emerged between search engines and content providers has been that search engines can retrieve, parse and partially display content from the providers, in exchange of bringing more visibility and traffic to them. A further assumption has been encoded in the way the Web operates that this contract is the default for anyone making content available publicly on the Web, with an opt-out mechanism encoded via the <a href="https://www.rfc-editor.org/rfc/rfc9309.html"><code>robots.txt</code> directives</a> [[RFC9309]].
 </p>
 <p>
 Over time, in addition to the links to sites matching the user's query, search engines have integrated more ways to surface content directly from the target Web sites: either through rich snippets (typically made possible by the use of schema.org metadata) or through embedded preview (e.g., what the <a href="https://amp.dev/">AMP project</a> enabled). These changes were frequently accompanied by sometimes challenging discussions around the balance between bringing additional visibility to crawled content and reducing the incentive from end-users to visit the source website (e.g., because they may have already received sufficient information from the search results page).
@@ -298,7 +353,7 @@ Several groups and individuals have been exploring how to make it possible for c
 </p>
 <ul>
 
-<li>The <a href="https://www.w3.org/groups/cg/tdmrep">Text and Data Mining Reservation Protocol Community Group</a> has developed the <a href="https://www.w3.org/community/reports/tdmrep/CG-FINAL-tdmrep-20240202/">TDM Reservation Protocol (TDMRep)</a> to "express the reservation of rights relative to text & data mining applied to lawfully accessible Web content"
+<li>The <a href="https://www.w3.org/groups/cg/tdmrep">Text and Data Mining Reservation Protocol Community Group</a> has developed the <a href="https://www.w3.org/community/reports/tdmrep/CG-FINAL-tdmrep-20240202/">TDM Reservation Protocol (TDMRep)</a> [[TDMRep]] to "express the reservation of rights relative to text & data mining applied to lawfully accessible Web content"
 
 <li>Discussions have started in IETF around updating the robots.txt directives; among others, the <a href="https://www.w3.org/community/robotstxt/">update robots.txt Community Group</a> proposes to add an opt-in mechanism to the robots.txt directives.
 </li>
@@ -312,8 +367,8 @@ Several groups and individuals have been exploring how to make it possible for c
 
 
 <p>
-  A key part of <a href="https://www.w3.org/TR/w3c-vision/#vision-web">W3C's vision for the Web</a> is to ensure the Web is developed around principles of interoperability: that is, for technologies that W3C codifies as Web standards, to ensure they are implemented and deployed in a way that will work the same across products, allowing for greater choice for users and fostering the long term viability of the content.</p>
-<p>When the algorithm on which interoperability relies is deterministic, ensuring interoperability is a matter of describing in sufficient detail and clarity the said algorithm, and running sufficient testing on the products to verify they achieve the intended result. The move to more <a href="https://www.w3.org/TR/design-principles/#algorithms">algorithmic specifications</a> and thorough automated testing (e.g., through the <a href="https://web-platform-tests.org/">Web Platform Tests project</a>) has largely been driven by the goal of providing a robust interoperable platform.
+  A key part of <a href="https://www.w3.org/TR/w3c-vision/#vision-web">W3C's vision for the Web</a> [[w3c-vision]] is to ensure the Web is developed around principles of interoperability: that is, for technologies that W3C codifies as Web standards, to ensure they are implemented and deployed in a way that will work the same across products, allowing for greater choice for users and fostering the long term viability of the content.</p>
+<p>When the algorithm on which interoperability relies is deterministic, ensuring interoperability is a matter of describing in sufficient detail and clarity the said algorithm, and running sufficient testing on the products to verify they achieve the intended result. The move to more <a href="https://www.w3.org/TR/design-principles/#algorithms">algorithmic specifications</a> [[design-principles]] and thorough automated testing (e.g., through the <a href="https://web-platform-tests.org/">Web Platform Tests project</a>) has largely been driven by the goal of providing a robust interoperable platform.
 </p>
 <div class=advisement>
 <p>
