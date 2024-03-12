@@ -100,6 +100,21 @@ We are gathering input and feedback in <a href="https://github.com/w3c/ai-web-im
 
 <section>
   <h2>Executive Summary</h2>
+
+  <p>[=Machine Learning models=] support a new generation of [=AI systems=]. These models are often [=training|trained=] on a large amount of Web content, deployed at scale through web interfaces, and can be used to generate plausible content at unprecedented speed and cost.</p>
+  <p>Given the scope and scale of these intersections, this wave of [=AI systems=] is having potential systemic impact on the Web and some of the equilibriums on which its ecosystem had grown.</p>
+  <p>This document reviews these intersections through their ethical, societal and technical impacts and highlights a number of areas where standardization, guidelines and interoperability could help manage these changes:</p>
+  <ul>
+    <li>a <a href="#b7">consent mechanism for the use of Web content in training pipelines</a>,</li>
+    <li><a href="#b1">labeling content as computer-generated</a>,</li>
+    <li><a href="#b2">surfacing training sources in model cards</a>,</li>
+    <li><a href="#b3">exposing model-backed Web APIs</a>,</li>
+    <li><a href="#b4">personal data stores</a> to reduce risk of private data exposure,</li>
+    <li><a href="#b5">strengthening credentials and identity mechanisms</a> in light of new impersonation risks,</li>
+    <li>an <a href="#b6">evalualation framework for the environmental impact of Web standards</a>,</li>
+    <li>a <a href="#b8">framework to manage interoperability based on model inference</a>, including for non-deterministic models.</li>
+  </ul>
+  <p>We are <a href="https://github.com/w3c/ai-web-impact/issues">seeking input</a> from the community on proposals that could help make progress on these topics, and on other topics that this document has failed to identify.</p>
 </section>
 
 <section>
@@ -180,8 +195,9 @@ That need is pressing directly for end-users as they individually consume conten
 <p>
 We do not know of any credible solution that could guarantee (e.g., through cryptography) that a given piece of content was or was not generated (partially or entirely) by [=AI systems=]. That gap unfortunately leaves a systemic risk in terms of misinformation and spam that should be of grave concern for the health of the Web as a content distribution platform and of society as a whole.
 </p>
+<div id=b1 class=advisement>
 <p>
-A plausible role of standards in this space would be to at least facilitate the labeling of content to indicate whether it is the result of a computer-generated process. While such labels are unlikely to be enforceable through technical means, they could gain broad adoption with a combination of being automatically added by [=AI systems=] (possibly with enough friction that removing them would be at least somewhat costly at scale), and possibly serve as hooks in the regulatory context.
+A plausible role of standards in this space would be to at least facilitate the <strong>labeling of content</strong> to indicate whether it is the result of a <strong>computer-generated process</strong>. While such labels are unlikely to be enforceable through technical means, they could gain broad adoption with a combination of being automatically added by [=AI systems=] (possibly with enough friction that removing them would be at least somewhat costly at scale), and possibly serve as hooks in the regulatory context.
 </p>
 <p>
 A number of proposals have already emerged in this space, which may benefit from more visibility, discussion and ultimately, scalable deployment:
@@ -195,6 +211,7 @@ A number of proposals have already emerged in this space, which may benefit from
 <li><a href="https://github.com/whatwg/html/issues/9479">Proposal: Meta Tag for AI Generated Content</a> in [[HTML]] (individual submission)
 </li>
 </ul>
+</div>
 </section>
 <section>
 <h4>Transparency on AI-mediated services</h4>
@@ -209,12 +226,14 @@ Such bias will disproportionately affect users whose expected input or output is
 <p>
 Until better tools emerge to facilitate at least the systematic detection of such bias, encouraging and facilitating the systematic publication of information on whether a Machine Learning model is in use, and how such a model was trained and checked for bias may help end- users make more informed choices about the services they use (which, of course, only helps if they have a choice in the first place, which may not apply e.g., to some government-provided services). 
 </p>
-<div class=advisement>
+<div id=b2 class=advisement>
 <p>
-<a href="https://arxiv.org/pdf/1810.03993.pdf">Model cards for Model Reporting</a> [[MODEL-CARDS]] are one of the approaches that were <a href="https://www.w3.org/2020/06/machine-learning-workshop/report.html#user">discussed in the 2020 W3C Workshop on Web and Machine Learning</a> [[W3C-ML-WS]]. Assuming this reporting provides meaningful and actionable transparency, a question for (the) technical standardization would be how such cards should be serialized and made discoverable on the Web.
+<a href="https://arxiv.org/pdf/1810.03993.pdf">Model cards for Model Reporting</a> [[MODEL-CARDS]] are one of the approaches that were <a href="https://www.w3.org/2020/06/machine-learning-workshop/report.html#user">discussed in the 2020 W3C Workshop on Web and Machine Learning</a> [[W3C-ML-WS]]. Assuming this reporting provides meaningful and actionable transparency, a question for (the) technical standardization would be how such <strong>cards should be serialized and made discoverable on the Web</strong>.
 </p>
+</div>
+<div id=b3 class=advisement>
 <p>
-W3C should look at a particular category of model deployments: models that are used by browser engines themselves to fulfill API requests. A number of Web browser APIs already expose (more or less explicitly) output of [=Machine Learning models=]:
+W3C should look at a particular category of model deployments: <strong>models that are used by browser engines themselves to fulfill API</strong> requests. A number of Web browser APIs already expose (more or less explicitly) output of [=Machine Learning models=]:
 </p>
 <ul>
 
@@ -244,8 +263,8 @@ Models trained on un-triaged or partially triaged content off the Web are bound 
 <p>
   While the exclusion rules discussed in the context of content creation could partially help with the first situation, they would not help with the second one. This problem space is likely to be under heavy regulatory and legal scrutiny.</p>
   <p>From a technical standardization perspective, beyond labeling content, the emergence of user data being repurposed for model [=training=] and some of the pushback it is generating may bring renewed momentum (from user and service provider alike) behind decentralized architectures that leave user data under less centralized control (as illustrated by the recent widening adoption of Activity Streams).</p>
-<div class=advisement>
-  <p>A particularly relevant instance of that pattern is emerging with so-called personal data stores: these provide ways for users to exert more fine-grained control of their data, by separating more clearly the roles of data store and data processor (which, in a traditional cloud infrastructure, would otherwise typically be handled by a single entity). 
+<div id=b4 class=advisement>
+  <p>A particularly relevant instance of that pattern is emerging with so-called <strong>personal data stores</strong>: these provide ways for users to exert more fine-grained control of their data, by separating more clearly the roles of data store and data processor (which, in a traditional cloud infrastructure, would otherwise typically be handled by a single entity). 
 </p>
 
 <p>
@@ -264,9 +283,9 @@ Allowing to [=run=] a model on personal data without uploading that data to a se
 <p>
 A number of [=Machine Learning models=] have significantly lowered the cost of generating credible textual, as well as video (real-time or recorded) impersonations of real persons. This creates significant risks of upscaling the capabilities of phishing and other types of frauds, and thus raising much higher the barriers to establish trust in online interactions. If users no longer feel safe in their digitally-mediated interactions, the Web will no longer be able to play its role as a platform for these interactions.
 </p>
-<div class=advisement>
+<div id=b5 class=advisement>
 <p>
-This points towards even stronger needs for robust identity and credential management on the Web. The work of the <a href="https://www.w3.org/2017/vc/WG/">Verifiable Credentials Working Group</a> allows to express credentials in a cryptographically secure, privacy-preserving, and machine-verifiable way [[VC-DATA-MODEL]]. The <a href="https://lists.w3.org/Archives/Public/public-new-work/2024Jan/0006.html">proposed work to better integrate Federated Identity systems into browsers</a> [[FEDCM]] and the <a href="https://wicg.github.io/digital-identities/">emerging one on surfacing digital credentials to Web content</a> [[DIGITAL-CREDENTIALS]] are likely part of mitigating the risks associated with these new impersonation threats.
+This points towards even stronger needs for <strong>robust identity and credential management</strong> on the Web. The work of the <a href="https://www.w3.org/2017/vc/WG/">Verifiable Credentials Working Group</a> allows to express credentials in a cryptographically secure, privacy-preserving, and machine-verifiable way [[VC-DATA-MODEL]]. The <a href="https://lists.w3.org/Archives/Public/public-new-work/2024Jan/0006.html">proposed work to better integrate Federated Identity systems into browsers</a> [[FEDCM]] and the <a href="https://wicg.github.io/digital-identities/">emerging one on surfacing digital credentials to Web content</a> [[DIGITAL-CREDENTIALS]] are likely part of mitigating the risks associated with these new impersonation threats.
 </p>
 </div>
 </section>
@@ -278,8 +297,8 @@ This points towards even stronger needs for robust identity and credential manag
 [=Training=] and [=running=] [=Machine Learning models=] can prove very resource-intensive, in particular in terms of power- and water-consumption. The imperative of reducing humanity's footprint on natural resources should apply particularly strongly to the technologies that standardization helps deploy at scale. 
 </p>
 <p>There is relatively new but promising work in the <a href="https://www.w3.org/community/sustyweb/">Sustainable Web Design Community Group</a> (a <a href="https://lists.w3.org/Archives/Public/public-new-work/2024Mar/0000.html">candidate to become a standardization Working Group</a>) to explain how to <a href="https://www.w3.org/blog/2023/introducing-web-sustainability-guidelines/">use Web technologies in a sustainable way</a>.</p>
-<div class=advisement>
-<p>W3C still lacks a well-defined framework to evaluate the environmental impact of its standards. Given the documented high environmental impact of [=AI systems=], it will surely become more important that W3C groups that are expected to accelerate the deployment of [=Machine Learning models=] take a proactive approach in exploring and documenting how they envision the environmental impact of their work, and possible mitigations they might identify.</p>
+<div id=b6 class=advisement>
+<p>W3C still lacks a well-defined <strong>framework to evaluate the environmental impact of its standards</strong>. Given the documented high environmental impact of [=AI systems=], it will surely become more important that W3C groups that are expected to accelerate the deployment of [=Machine Learning models=] take a proactive approach in exploring and documenting how they envision the environmental impact of their work, and possible mitigations they might identify.</p>
 </div>
 </section>
 <section>
@@ -344,9 +363,9 @@ In making that comparison, it's also important to note significant differences:
 <p>
 Given the likely different expectations around the quid-pro-quo of crawling in the context of [=AI systems=], it is not obvious that the permission-less pattern inherited from the early days of the Web (robots.txt was designed in 1994) would be a satisfactory match to ensure the long term sustainability of content publication on the Web (itself presumably in the long term interest of AI crawlers themselves).
 </p>
-<div class=advisement>
+<div id=b7 class=advisement>
 <p>
-In general, a possibly helpful line of inquiry for standards in this space would be to identify solutions that help content producers and AI crawlers to find agreeable terms, ideally at a scale that would make it appealing to all parties.
+In general, a possibly helpful line of inquiry for standards in this space would be to identify solutions that help <strong>content producers and AI crawlers to find agreeable terms, ideally at a scale</strong> that would make it appealing to all parties.
 </p>
 <p>
 Several groups and individuals have been exploring how to make it possible for content publishers to express their willingness to get their content used for [=training=] [=Machine Learning models=]:
@@ -370,15 +389,15 @@ Several groups and individuals have been exploring how to make it possible for c
   A key part of <a href="https://www.w3.org/TR/w3c-vision/#vision-web">W3C's vision for the Web</a> [[w3c-vision]] is to ensure the Web is developed around principles of interoperability: that is, for technologies that W3C codifies as Web standards, to ensure they are implemented and deployed in a way that will work the same across products, allowing for greater choice for users and fostering the long term viability of the content.</p>
 <p>When the algorithm on which interoperability relies is deterministic, ensuring interoperability is a matter of describing in sufficient detail and clarity the said algorithm, and running sufficient testing on the products to verify they achieve the intended result. The move to more <a href="https://www.w3.org/TR/design-principles/#algorithms">algorithmic specifications</a> [[design-principles]] and thorough automated testing (e.g., through the <a href="https://web-platform-tests.org/">Web Platform Tests project</a>) has largely been driven by the goal of providing a robust interoperable platform.
 </p>
-<div class=advisement>
+<div id=b8 class=advisement>
 <p>
 As discussed above, [=Machine Learning models=] are already finding their ways in standardized Web APIs. These creates two challenges to our interoperability goals:
 </p>
 <ul>
 
-<li>[=Machine Learning models=] are mostly not built or described as a series of algorithmic steps. If a given standardized behavior is expected to be best fulfilled by [=Machine Learning models=], how should that behavior be specified? How can it be tested to a level that sufficiently verifies an interoperable outcome across products that would use different models? What impact would it have on the fingerprinting surface of the browsers?
+<li>[=Machine Learning models=] are mostly not built or described as a series of algorithmic steps. If a given standardized behavior is expected to be best fulfilled by [=Machine Learning models=], how should that behavior be specified? How can it be tested to a level that sufficiently verifies an <strong>interoperable outcome across products that would use different models</strong>? What impact would it have on the fingerprinting surface of the browsers?
 
-<li>A number of important [=Machine Learning models=] are not deterministic; if or when some of these non-deterministic models get exposed in standardized APIs, this consistency question is no longer limited to two products using two different models, since a given input would no longer produce a predetermined output. It is not clear to us at the moment how to prepare for interoperable behaviors based on non-deterministic models, which probably raises the question of whether and how such models should be acceptable as part of interoperable implementations.
+<li>A number of important [=Machine Learning models=] are not deterministic; if or when some of these <strong>non-deterministic models</strong> get exposed in standardized APIs, this consistency question is no longer limited to two products using two different models, since a given input would no longer produce a predetermined output. It is not clear to us at the moment how to prepare for interoperable behaviors based on non-deterministic models, which probably raises the question of whether and how such models should be acceptable as part of interoperable implementations.
 </li>
 </ul>
 </div>
