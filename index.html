@@ -38,7 +38,7 @@ dfn{cursor:pointer}
     darkMode: true,
     status: "UD",
     editors: [ {name: "Dominique Hazael-Massieux", email: "dom@w3.org"}],
-    latestVersion: null,
+    latestVersion: "https://www.w3.org/2024/ai-web-impact/",
     localBiblio: {
 	"ISO/IEC-22989": {
 	    href: "https://www.iso.org/standard/74296.html",
@@ -95,7 +95,14 @@ dfn{cursor:pointer}
 	    publisher: "Text and Data Mining Reservation Protocol Community Group"
 	}
     },
-    github: "https://github.com/w3c/ai-web-impact"
+    github: "https://github.com/w3c/ai-web-impact",
+    edDraftURI: null,
+    postProcess: [
+	function() {
+	    // remove first (auto-generated) paragraph of SOTD
+	    document.getElementById("sotd").querySelector("p").remove();
+	}
+    ]
 }</script>
 
   
@@ -181,7 +188,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "email": "dom@w3.org"
     }
   ],
-  "latestVersion": null,
+  "latestVersion": "https://www.w3.org/2024/ai-web-impact/",
   "localBiblio": {
     "ISO/IEC-22989": {
       "href": "https://www.iso.org/standard/74296.html",
@@ -258,8 +265,12 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     }
   },
   "github": "https://github.com/w3c/ai-web-impact",
-  "publishISODate": "2024-03-12T00:00:00.000Z",
-  "generatedSubtitle": "12 March 2024"
+  "edDraftURI": null,
+  "postProcess": [
+    null
+  ],
+  "publishISODate": "2024-03-13T00:00:00.000Z",
+  "generatedSubtitle": "13 March 2024"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/base.css">
 <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="https://www.w3.org/StyleSheets/TR/2021/dark.css"></head>
@@ -267,15 +278,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <body class="h-entry informative"><div class="head">
     
     <h1 id="title" class="title">AI &amp; the Web: Understanding and managing the impact of Machine Learning models on the Web</h1> 
-    <p id="w3c-state"> <time class="dt-published" datetime="2024-03-12">12 March 2024</time></p>
+    <p id="w3c-state"> <time class="dt-published" datetime="2024-03-13">13 March 2024</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
         
         <dt>Latest published version:</dt><dd>
-                none
+                <a href="https://www.w3.org/2024/ai-web-impact/">https://www.w3.org/2024/ai-web-impact/</a>
               </dd>
-        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/ai-web-impact/">https://w3c.github.io/ai-web-impact/</a></dd>
+        
         <dt>History:</dt><dd>
                     <a href="https://github.com/w3c/ai-web-impact/commits/">Commit history</a>
                   </dd>
@@ -320,11 +331,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 This document proposes an analysis of the systemic impact of <a data-link-type="dfn|abstract-op" href="#dfn-artificial-intelligence-system" class="internalDFN" id="ref-for-dfn-artificial-intelligence-system-1">AI systems</a>, and in particular ones based on <a data-link-type="dfn|abstract-op" href="#dfn-model" class="internalDFN" id="ref-for-dfn-model-1">Machine Learning models</a>, on the Web, and the role that Web standardization may play in managing that impact.
 </p>
 </section>
-<section id="sotd" class="introductory"><h2>Status of This Document</h2><p>
-      This document is merely a <abbr title="World Wide Web Consortium">W3C</abbr>-internal
-       document. It has no official standing
-      of any kind and does not represent consensus of the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
-    </p>
+<section id="sotd" class="introductory"><h2>Status of This Document</h2>
 <p>
 This document is intended to capture the current shared understanding of the <a href="https://www.w3.org/staff/"><abbr title="World Wide Web Consortium">W3C</abbr> Team</a> on the current and expected impact of developments linked to <a data-link-type="dfn|abstract-op" href="#dfn-artificial-intelligence-system" class="internalDFN" id="ref-for-dfn-artificial-intelligence-system-2">Artificial Intelligence systems</a> on the Web, and identifying explorations the World Wide Web Consortium  community has started or ought to be starting, to manage that impact. It does not represent any consensus from the <abbr title="World Wide Web Consortium">W3C</abbr> Membership nor is it a standardization document.
 </p>
