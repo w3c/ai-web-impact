@@ -12,7 +12,7 @@
     darkMode: true,
     status: "UD",
     editors: [ {name: "Dominique Hazael-Massieux", email: "dom@w3.org"}],
-    latestVersion: null,
+    latestVersion: "https://www.w3.org/2024/ai-web-impact/",
     localBiblio: {
 	"ISO/IEC-22989": {
 	    href: "https://www.iso.org/standard/74296.html",
@@ -69,7 +69,14 @@
 	    publisher: "Text and Data Mining Reservation Protocol Community Group"
 	}
     },
-    github: "https://github.com/w3c/ai-web-impact"
+    github: "https://github.com/w3c/ai-web-impact",
+    edDraftURI: null,
+    postProcess: [
+	function() {
+	    // remove first (auto-generated) paragraph of SOTD
+	    document.getElementById("sotd").querySelector("p").remove();
+	}
+    ]
 }</script>
 
   <script class="remove" src=
