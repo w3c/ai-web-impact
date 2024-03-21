@@ -1,9 +1,9 @@
-name: Auto publish
+name: Auto publish ZH
 on:
   pull_request: {}
   push:
     paths:
-      - index.html
+      - index-zh.html
     branches: [main]
 jobs:
   main:
@@ -15,5 +15,6 @@ jobs:
       - uses: actions/checkout@v4
       - uses: w3c/spec-prod@v2
         with:
+          SOURCE: index-zh.html
           GH_PAGES_BRANCH: gh-pages
-          SOURCE: index.html
+          TOOLCHAIN: respec
