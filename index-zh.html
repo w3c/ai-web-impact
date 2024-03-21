@@ -74,7 +74,10 @@
     postProcess: [
 	function() {
 	    // remove first (auto-generated) paragraph of SOTD
-	    document.getElementById("sotd").querySelector("p").remove();
+	  document.getElementById("sotd").querySelector("p").remove();
+	  // clean spurrious hreflang from span in  ToC
+	  // (relevant optimistic ReSpec code https://github.com/w3c/respec/blob/5f0ab541921ee908047fddcedaeb02171e3cab79/src/core/structure.js#L180 )
+	  document.getElementById("toc").querySelectorAll("span").forEach(el => el.removeAttribute("hreflang"));
 	}
     ]
 }</script>
