@@ -1,40 +1,14 @@
-<!DOCTYPE html><html lang="zh-hans"><head>
-<meta charset="utf-8">
-<meta name="generator" content="ReSpec 34.5.0">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<style>
-dfn{cursor:pointer}
-.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;background:var(--indextable-hover-bg,#fff);color:#000;color:var(--text,#000);box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);box-shadow:0 1em 3em -.4em var(--tocsidebar-shadow,rgba(0,0,0,.3)),0 0 1px 1px var(--tocsidebar-shadow,rgba(0,0,0,.05));border-radius:2px}
-.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
-.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;border-bottom-color:var(--indextable-hover-bg,#fff);top:0}
-.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1;border-bottom-color:var(--indextable-hover-bg,#a2a9b1)}
-.dfn-panel *{margin:0}
-.dfn-panel b{display:block;color:#000;color:var(--text,#000);margin-top:.25em}
-.dfn-panel ul a[href]{color:#333;color:var(--text,#333)}
-.dfn-panel>div{display:flex}
-.dfn-panel a.self-link{font-weight:700;margin-right:auto}
-.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
-.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
-.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
-.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
-.dfn-panel a[href]:hover{border-bottom-width:1px}
-.dfn-panel ul{padding:0}
-.dfn-panel li{margin-left:1em}
-.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
-</style>
-  
-<title>AI &amp; Web：理解与管理机器学习模型对Web的影响</title>
-  
-  
-<style>
-
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+  <title>AI & Web：理解与管理机器学习模型对Web的影响</title>
+  <meta charset=utf-8>
+  <style>
     a[href].internalDFN {
 	border-bottom-style: dotted;
     }
-  
-</style>
-  
-<script>var respecConfig = {
+  </style>
+  <script>var respecConfig = {
   // Set this date to match the date of the version that was used as a basis
   // for the translation
   publishDate: "2024-03-13",
@@ -112,252 +86,36 @@ dfn{cursor:pointer}
     ]
 }</script>
 
-  
-<style id="respec-mainstyle">
-@keyframes pop{
-0%{transform:scale(1,1)}
-25%{transform:scale(1.25,1.25);opacity:.75}
-100%{transform:scale(1,1)}
-}
-:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
-dfn{font-weight:700}
-a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
-a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
-a.bibref{text-decoration:none}
-.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
-.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
-@supports not (text-decoration:red wavy underline){
-.respec-offending-element:not(pre){display:inline-block}
-.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
-}
-#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
-cite .bibref{font-style:normal}
-a[href].orcid{padding-left:4px;padding-right:4px}
-a[href].orcid>svg{margin-bottom:-2px}
-.toc a,.tof a{text-decoration:none}
-ol.tof,ul.tof{list-style:none outside none}
-.caption{margin-top:.5em;font-style:italic}
-table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
-.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
-.simple th a{color:#fff;padding:3px 5px;text-align:left}
-.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
-.simple td{padding:3px 10px;border-top:1px solid #ddd}
-.simple tr:nth-child(even){background:#f0f6ff}
-.section dd>p:first-child{margin-top:0}
-.section dd>p:last-child{margin-bottom:0}
-.section dd{margin-bottom:1em}
-.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
-#issue-summary>ul{column-count:2}
-#issue-summary li{list-style:none;display:inline-block}
-details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
-details.respec-tests-details>*{padding-right:2em}
-details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
-details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
-details.respec-tests-details>ul{width:100%;margin-top:-.3em}
-details.respec-tests-details>li{padding-left:1em}
-.self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
-aside.example .marker>a.self-link{color:inherit}
-.header-wrapper{display:flex;align-items:baseline}
-:is(h2,h3,h4,h5,h6):not(#toc>h2,#abstract>h2,#sotd>h2,.head>h2){position:relative;left:-.5em}
-:is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-1.1em;font-size:1rem;opacity:.5}
-:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
-:is(h2,h3)+a.self-link{top:-.2em}
-:is(h4,h5,h6)+a.self-link::before{color:#000}
-@media (max-width:767px){
-dd{margin-left:0}
-}
-@media print{
-.removeOnSave{display:none}
-}
-</style>
+  <script class="remove" src=
+  "https://www.w3.org/Tools/respec/respec-w3c"></script>
+</head>
 
-<style>
+<body>
 
-        :root {
-          color-scheme: light dark;
-        }
-      
-</style>
-<meta name="description" content="本文档给出AI系统尤其是基于机器学习模型的AI系统对Web的系统性影响，以及Web标准化在管理这种影响方面所扮演角色的分析。">
-<style>
-var{position:relative;cursor:pointer}
-var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
-var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#222}
-var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#222;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
-var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
-</style>
-<script id="initialUserConfig" type="application/json">{
-  "publishDate": "2024-03-13",
-  "darkMode": true,
-  "status": "UD",
-  "editors": [
-    {
-      "name": "Dominique Hazael-Massieux",
-      "email": "dom@w3.org"
-    }
-  ],
-  "latestVersion": "https://www.w3.org/reports/ai-web-impact/",
-  "localBiblio": {
-    "ISO/IEC-22989": {
-      "href": "https://www.iso.org/standard/74296.html",
-      "title": "Artificial intelligence concepts and terminology",
-      "status": "Published",
-      "publisher": "ISO/IEC",
-      "isoNumber": "ISO 22989:2022",
-      "date": "July 2022",
-      "id": "iso/iec-22989"
-    },
-    "C2PA-AI": {
-      "href": "https://c2pa.org/specifications/specifications/1.3/ai-ml/ai_ml.html",
-      "title": "Guidance for Artificial Intelligence and Machine Learning",
-      "publisher": "C2PA",
-      "id": "c2pa-ai"
-    },
-    "IPTC-DST": {
-      "title": "Digital Source Type vocabulary",
-      "href": "https://cv.iptc.org/newscodes/digitalsourcetype/",
-      "publisher": "IPTC",
-      "id": "iptc-dst"
-    },
-    "UNESCO-AI": {
-      "href": "https://unesdoc.unesco.org/ark:/48223/pf0000380455",
-      "title": "Recommendation on the Ethics of Artificial Intelligence",
-      "publisher": "UNESCO",
-      "date": "2021",
-      "id": "unesco-ai"
-    },
-    "WAI-AI": {
-      "title": "Artificial Intelligence (AI) and Accessibility Research Symposium 2023",
-      "href": "https://www.w3.org/WAI/research/ai2023/",
-      "publisher": "W3C Web Accessibility Initiative",
-      "date": "Jan 2023",
-      "id": "wai-ai"
-    },
-    "MODEL-CARDS": {
-      "title": "Model Cards for Model Reporting",
-      "href": "https://arxiv.org/pdf/1810.03993.pdf",
-      "authors": [
-        "M. Mitchell",
-        "S. Wu",
-        "A. Zaldivar",
-        "P. Barnes",
-        "L. Vasserman",
-        "B. Hutchinson",
-        "E. Spitzer",
-        "I. Deborah Raji",
-        "T. Gebru"
-      ],
-      "date": "14 Juan 2019",
-      "id": "model-cards"
-    },
-    "W3C-ML-WS": {
-      "title": "W3C Workshop Report on Web and Machine Learning",
-      "href": "https://www.w3.org/2020/06/machine-learning-workshop/report.html",
-      "publisher": "W3C",
-      "date": "October 2020",
-      "id": "w3c-ml-ws"
-    },
-    "DIGITAL-CREDENTIALS": {
-      "href": "https://wicg.github.io/digital-identities/",
-      "title": "Digital Credentials",
-      "publisher": "WICG",
-      "date": "March 2024",
-      "id": "digital-credentials"
-    },
-    "TDMRep": {
-      "href": "https://www.w3.org/community/reports/tdmrep/CG-FINAL-tdmrep-20240202/",
-      "title": "Final Community Group Report",
-      "date": "February 2024",
-      "publisher": "Text and Data Mining Reservation Protocol Community Group",
-      "id": "tdmrep"
-    }
-  },
-  "github": "https://github.com/w3c/ai-web-impact",
-  "edDraftURI": null,
-  "postProcess": [
-    null
-  ],
-  "publishISODate": "2024-03-13T00:00:00.000Z",
-  "generatedSubtitle": "2024年3月13日"
-}</script>
-<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/base.css">
-<link rel="stylesheet" media="(prefers-color-scheme: dark)" href="https://www.w3.org/StyleSheets/TR/2021/dark.css"></head>
-
-<body class="h-entry informative"><div class="head">
-    
-    <h1 id="title" class="title">AI &amp; Web：理解与管理机器学习模型对Web的影响</h1> 
-    <p id="w3c-state"> <time class="dt-published" datetime="2024-03-13">2024年3月13日</time></p>
-    <details open="">
-      <summary>More details about this document</summary>
-      <dl>
-        
-        <dt>最新发布版本：</dt><dd>
-                <a href="https://www.w3.org/reports/ai-web-impact/">https://www.w3.org/reports/ai-web-impact/</a>
-              </dd>
-        
-        <dt>历史：</dt><dd>
-                    <a href="https://github.com/w3c/ai-web-impact/commits/">Git提交历史</a>
-                  </dd>
-        
-        
-        
-        
-        
-        <dt>编辑：</dt><dd class="editor p-author h-card vcard">
-    <span class="p-name fn">Dominique Hazael-Massieux</span>
-  </dd>
-        
-        
-        <dt>反馈：</dt><dd>
-        <a href="https://github.com/w3c/ai-web-impact/">GitHub w3c/ai-web-impact</a>
-        (<a href="https://github.com/w3c/ai-web-impact/pulls/">pull requests</a>,
-        <a href="https://github.com/w3c/ai-web-impact/issues/new/choose">new issue</a>,
-        <a href="https://github.com/w3c/ai-web-impact/issues/">open issues</a>)
-      </dd>
-        
-        
-      </dl>
-    </details>
-    
-    
-    <p class="copyright">
-    <a href="https://www.w3.org/policies/#copyright">Copyright</a>
-    ©
-    2024
-    
-    <a href="https://www.w3.org/">World Wide Web Consortium</a>.
-    <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup>
-    <a href="https://www.w3.org/policies/#Legal_Disclaimer">liability</a>,
-    <a href="https://www.w3.org/policies/#W3C_Trademarks">trademark</a> and
-    <a rel="license" href="https://www.w3.org/copyright/software-license-2023/" title="W3C Software and Document Notice and License">permissive document license</a> rules apply.
-  </p>
-    <hr title="Separator for header">
-  </div>
-
-<section id="abstract" class="introductory"><h2>摘要</h2>
+<section id=abstract>
 <p>
-本文档给出<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-0" class="internalDFN" id="ref-for-dfn-generatedID-0-1">AI系统</a>尤其是基于<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-2" class="internalDFN" id="ref-for-dfn-generatedID-2-1">机器学习模型</a>的AI系统对Web的系统性影响，以及Web标准化在管理这种影响方面所扮演角色的分析。
+本文档给出[=AI系统=]尤其是基于[=机器学习模型=]的AI系统对Web的系统性影响，以及Web标准化在管理这种影响方面所扮演角色的分析。
 </p>
 </section>
-<section id="sotd" class="introductory"><h2>关于本文档</h2>
+<section id=sotd>
 <p>
-本文档旨在收集<a hreflang="en" href="https://www.w3.org/staff/"><abbr title="World Wide Web Consortium">W3C</abbr>团队</a>对<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-0" class="internalDFN" id="ref-for-dfn-generatedID-0-2">人工智能系统</a>在Web上当前及预期影响的共同理解，并识别万维网联盟为管理其影响而已经开始或者应该开始的探索。本文档既不代表<abbr title="World Wide Web Consortium">W3C</abbr>会员的任何共识，也不是标准化文档。
+本文档旨在收集<a hreflang="en" href="https://www.w3.org/staff/">W3C团队</a>对[=人工智能系统=]在Web上当前及预期影响的共同理解，并识别万维网联盟为管理其影响而已经开始或者应该开始的探索。本文档既不代表W3C会员的任何共识，也不是标准化文档。
 </p>
 <p>
-本文档由DominiqueHazaël-Massieux（<a href="mailto：dom@w3.org">dom@w3.org</a>）撰写，<abbr title="World Wide Web Consortium">W3C</abbr>团队的其他同事也有重要贡献。</p>
+本文档由DominiqueHazaël-Massieux（<a href="mailto：dom@w3.org">dom@w3.org</a>）撰写，W3C团队的其他同事也有重要贡献。</p>
 <p>
-本文档的首要目标是辅助开展在标准化层面必须做什么才能让AI（尤其是<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-2" class="internalDFN" id="ref-for-dfn-generatedID-2-2">机器学习模型</a>）的系统性影响伤害更小或更易管理的结构化讨论。但是，本文档肯定是不全面的，甚至还可能存在错误。我们也正为此在<a hreflang="en" href="https://github.com/w3c/ai-web-impact/issues">GitHub</a>上广泛征集输入和反馈，最理想的反馈时间是2024年6月30日前。
+本文档的首要目标是辅助开展在标准化层面必须做什么才能让AI（尤其是[=机器学习模型=]）的系统性影响伤害更小或更易管理的结构化讨论。但是，本文档肯定是不全面的，甚至还可能存在错误。我们也正为此在<a hreflang="en" href="https://github.com/w3c/ai-web-impact/issues">GitHub</a>上广泛征集输入和反馈，最理想的反馈时间是2024年6月30日前。
 </p>
 <p>
-根据收到的反馈，我们下一步可能会组织相关人士更深入地进行评审，或者举办<abbr title="World Wide Web Consortium">W3C</abbr>专题研讨会，也可能会制定一个相关标准化的路线图。</p>
+根据收到的反馈，我们下一步可能会组织相关人士更深入地进行评审，或者举办W3C专题研讨会，也可能会制定一个相关标准化的路线图。</p>
 
-</section><nav id="toc"><h2 class="introductory" id="generatedID-10">内容大纲</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">摘要</a></li><li class="tocline"><a class="tocxref" href="#sotd">关于本文档</a></li><li class="tocline"><a class="tocxref" href="#generatedID-0"><bdi class="secno">1. </bdi>概述</a></li><li class="tocline"><a class="tocxref" href="#generatedID-1"><bdi class="secno">2. </bdi>简介</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#generatedID-2"><bdi class="secno">2.1 </bdi>术语</a></li></ol></li><li class="tocline"><a class="tocxref" href="#ai-web"><bdi class="secno">3. </bdi>AI系统与Web的交叉领域</a></li><li class="tocline"><a class="tocxref" href="#generatedID-3"><bdi class="secno">4. </bdi>伦理和社会影响</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#generatedID-4"><bdi class="secno">4.1 </bdi>尊重<span class="formerLink">自治</span>和<span class="formerLink">透明度</span></a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ai"><bdi class="secno">4.1.1 </bdi>关于AI生成内容的透明度</a></li><li class="tocline"><a class="tocxref" href="#ai-0"><bdi class="secno">4.1.2 </bdi>AI介入服务的透明度</a></li></ol></li><li class="tocline"><a class="tocxref" href="#generatedID-5"><bdi class="secno">4.2 </bdi><span class="formerLink">隐私权和数据保护</span></a></li><li class="tocline"><a class="tocxref" href="#generatedID-6"><bdi class="secno">4.3 </bdi><span class="formerLink">安全与安保</span></a></li><li class="tocline"><a class="tocxref" href="#generatedID-7"><bdi class="secno">4.4 </bdi><span class="formerLink">可持续性</span></a></li><li class="tocline"><a class="tocxref" href="#generatedID-8"><bdi class="secno">4.5 </bdi>平衡内容创作者激励与消费者权益</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#generatedID-9"><bdi class="secno">4.5.1 </bdi>与搜索引擎的比较</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#interop"><bdi class="secno">5. </bdi><span data-link-type="dfn|abstract-op" class="formerLink">AI系统</span>对互用性的影响</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">A. </bdi>参考文献</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#generatedID"><bdi class="secno">A.1 </bdi>非规范性引用</a></li></ol></li></ol></nav>
+</section>
 
-<section id="generatedID-0"><div class="header-wrapper"><h2 id="x1"><bdi class="secno">1. </bdi>概述</h2><a class="self-link" href="#generatedID-0" aria-label="Permalink for Section 1."></a></div>
-  
+<section>
+  <h2>概述</h2>
 
-  <p><a data-link-type="dfn|abstract-op" href="#dfn-generatedID-2" class="internalDFN" id="ref-for-dfn-generatedID-2-3">机器学习模型</a>支撑着新一代的<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-0" class="internalDFN" id="ref-for-dfn-generatedID-0-3">AI系统</a>。这些模型通常使用大量Web内容<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-3" class="internalDFN" id="ref-for-dfn-generatedID-3-1">训练</a>，然后通过Web界面进行大规模部署，并且能够用来空前快速和低成本地生成可接受的内容。</p>
-  <p>鉴于这个交叉领域的范围和规模之大，<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-0" class="internalDFN" id="ref-for-dfn-generatedID-0-4">AI系统</a>的这波浪潮正在对Web及其生态发展所依赖的某些平衡产生潜在的系统性影响。</p>
+  <p>[=机器学习模型=]支撑着新一代的[=AI系统=]。这些模型通常使用大量Web内容[=训练=]，然后通过Web界面进行大规模部署，并且能够用来空前快速和低成本地生成可接受的内容。</p>
+  <p>鉴于这个交叉领域的范围和规模之大，[=AI系统=]的这波浪潮正在对Web及其生态发展所依赖的某些平衡产生潜在的系统性影响。</p>
   <p>本文档将从道德、社会和技术影响的角度评述这些交叉领域，同时重点分析标准化、指引性文件和互用能力有助于管理这些变化的一些领域：</p>  
   <ul>
     <li><a href="#b7">在模型训练流水线中使用Web内容的一种共识机制</a>；</li>
@@ -372,35 +130,35 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   <p>我们正在<a hreflang="en" href="https://github.com/w3c/ai-web-impact/issues">征求建议</a>，欢迎社区针对上面列出的这些领域，或者本文档没有提及的其他相关领域给出建设性的意见和建议。</p>
 </section>
 
-<section id="generatedID-1"><div class="header-wrapper"><h2 id="x2"><bdi class="secno">2. </bdi>简介</h2><a class="self-link" href="#generatedID-1" aria-label="Permalink for Section 2."></a></div>
-
+<section>
+<h2>简介</h2>
 
 
 <p>
 在计算机科学几十年来的发展中，人工智能的近期发展已经出现了一批系统，这些系统已经开始对Web产生<strong>系统性</strong>影响。可以预见，Web迄今为止健康发展所依赖的一些共同预期也将面临进一步转变。</p>
 <p>
-为了让<abbr title="World Wide Web Consortium">W3C</abbr>社区（以及其他Web相关的标准组织）能够有条不紊地讨论这些转变，本文档汇集了<abbr title="World Wide Web Consortium">W3C</abbr>团队当前针对“<a data-link-type="dfn|abstract-op" href="#dfn-generatedID" class="internalDFN" id="ref-for-dfn-generatedID-1">人工智能</a>”，更具体地说是针对<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-2" class="internalDFN" id="ref-for-dfn-generatedID-2-4">机器学习模型</a>（包括大语言模型和其他所谓的生成式AI模型），与作为一个系统的Web的交叉领域，以及<abbr title="World Wide Web Consortium">W3C</abbr>在这些领域中当前进展的共同理解。另外一个目标是提出随着这些领域的发展可能需要进行更多探索的相关问题。
+为了让W3C社区（以及其他Web相关的标准组织）能够有条不紊地讨论这些转变，本文档汇集了W3C团队当前针对“[=人工智能=]”，更具体地说是针对[=机器学习模型=]（包括大语言模型和其他所谓的生成式AI模型），与作为一个系统的Web的交叉领域，以及W3C在这些领域中当前进展的共同理解。另外一个目标是提出随着这些领域的发展可能需要进行更多探索的相关问题。
 </p>
 <p>
 当前的理解一定是不完整的，有时候甚至是错误的。我们希望通过公布这份文档并邀请社区对其进行评审，不断迭代地去完善这些共同的理解，同时帮助构建出一个社区路线图，以增进对这些领域的积极影响，减少对这些领域的危害。
 </p>
-<section id="generatedID-2"><div class="header-wrapper"><h3 id="x2-1"><bdi class="secno">2.1 </bdi>术语</h3><a class="self-link" href="#generatedID-2" aria-label="Permalink for Section 2.1"></a></div>
-
+<section>
+<h3>术语</h3>
 
 
 <p>
-“人工智能”是一个非常宽泛的概念，涵盖了算法、技巧和技术。[<cite><a class="bibref" data-link-type="biblio" href="#bib-iso/iec-22989" title="Artificial intelligence concepts and terminology">ISO/IEC-22989</a></cite>]把<dfn id="dfn-generatedID" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">人工智能</dfn>定义为“<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-0" class="internalDFN" id="ref-for-dfn-generatedID-0-5">AI系统</a>的机制及应用的研究与发展”，其中<dfn data-lt="人工智能系统|AI系统" id="dfn-generatedID-0" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">AI系统</dfn>是“一个工程化系统，能够按照人类给出的一组既定目标生成输出，比如生成内容、预测、建议或决定”。2024年初，在我撰写本文档时，Web圈子中关于人工智能这个话题的讨论焦点，主要是基于<dfn id="dfn-generatedID-1" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">机器学习</dfn>（“通过计算相关的技术优化模型参数的过程，以便模型的行为能够反映训练数据或者经验”）的系统及其软件表现形态，即<dfn id="dfn-generatedID-2" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">机器学习模型</dfn>（“能够根据输入的数据或者信息生成推理或预测结果的数学结构”）。
+“人工智能”是一个非常宽泛的概念，涵盖了算法、技巧和技术。[[ISO/IEC-22989]]把<dfn>人工智能</dfn>定义为“[=AI系统=]的机制及应用的研究与发展”，其中<dfn data-lt="人工智能系统">AI系统</dfn>是“一个工程化系统，能够按照人类给出的一组既定目标生成输出，比如生成内容、预测、建议或决定”。2024年初，在我撰写本文档时，Web圈子中关于人工智能这个话题的讨论焦点，主要是基于<dfn>机器学习</dfn>（“通过计算相关的技术优化模型参数的过程，以便模型的行为能够反映训练数据或者经验”）的系统及其软件表现形态，即<dfn>机器学习模型</dfn>（“能够根据输入的数据或者信息生成推理或预测结果的数学结构”）。
 </p>
 <p>
-我们知道人工智能有着更加宽泛的含义，以及它与其他一些Web或<abbr title="World Wide Web Consortium">W3C</abbr>相关的活动（如语义Web、链接数据）有交集，但本文档有意将对话聚焦于这些<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-2" class="internalDFN" id="ref-for-dfn-generatedID-2-5">机器学习模型</a>给Web带来的影响。 我们也知道本文档是在人们对这个领域的期望和投资膨胀的时期完成的，因而也可以看作是一种回应。在这种情况下，尤其需要一个框架来构建对话。
+我们知道人工智能有着更加宽泛的含义，以及它与其他一些Web或W3C相关的活动（如语义Web、链接数据）有交集，但本文档有意将对话聚焦于这些[=机器学习模型=]给Web带来的影响。 我们也知道本文档是在人们对这个领域的期望和投资膨胀的时期完成的，因而也可以看作是一种回应。在这种情况下，尤其需要一个框架来构建对话。
 </p>
 <p>
-因为聚焦于<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-1" class="internalDFN" id="ref-for-dfn-generatedID-1-1">机器学习</a>，本文档将通过操作<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-2" class="internalDFN" id="ref-for-dfn-generatedID-2-6">机器学习模型</a>的两个主要阶段来分析AI的影响：<dfn id="dfn-generatedID-3" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">训练</dfn>（“使用训练数据，根据机器学习算法，确定或改进机器学习模型参数的过程”）和<dfn data-lt="运行|推理" id="dfn-generatedID-4" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">推理</dfn>（实际使用模型得到预期结果） ，对后者我们偶尔也称之为运行模型。
+因为聚焦于[=机器学习=]，本文档将通过操作[=机器学习模型=]的两个主要阶段来分析AI的影响：<dfn>训练</dfn>（“使用训练数据，根据机器学习算法，确定或改进机器学习模型参数的过程”）和<dfn data-lt="运行">推理</dfn>（实际使用模型得到预期结果） ，对后者我们偶尔也称之为运行模型。
 </p>
 </section>
 </section>
-<section id="ai-web"><div class="header-wrapper"><h2 id="x3-ai-web"><bdi class="secno">3. </bdi>AI系统与Web的交叉领域</h2><a class="self-link" href="#ai-web" aria-label="Permalink for Section 3."></a></div>
-
+<section>
+<h2>AI系统与Web的交叉领域</h2>
 
 
 <p>
@@ -410,48 +168,48 @@ Web扮演的主要角色是作为一个平台让内容创作者向内容消费�
 
 <li>
 很多时候，模型都是使用从Web上爬取的内容进行训练的。这些内容的规模和（因底层标准约束而具有的）结构使其成为绝佳的训练数据来源，对AI发展到最近出现的一些引人瞩目的成果，比如大语言模型、图像/视频生成工等起到了支撑作用。
-</li><li>
+<li>
 从另外一方面看，其中很多AI模型可以用来生成规模前所未有的内容，这些内容借助Web的覆盖面得以平滑地展示给平台的数十亿用户。
 </li>
 </ul>
 <p>
-如果我们从更偏向技术的视角来审视Web平台以浏览器为媒介的部分，会发现Web依旧还是客户端/服务器架构。AI模型可以<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-4" class="internalDFN" id="ref-for-dfn-generatedID-4-1">运行</a>于服务端，也可以运行于客户端（此外，还有目前相对比较少见的<a hreflang="en" href="https://github.com/webmachinelearning/proposals/issues/5">二者混合的方式</a>）。在客户端，AI模型可以由浏览器来提供或操作（按照用户的请求或者应用的请求），也可以完全由客户端应用来提供或操作。
+如果我们从更偏向技术的视角来审视Web平台以浏览器为媒介的部分，会发现Web依旧还是客户端/服务器架构。AI模型可以[=运行=]于服务端，也可以运行于客户端（此外，还有目前相对比较少见的<a hreflang="en" href="https://github.com/webmachinelearning/proposals/issues/5">二者混合的方式</a>）。在客户端，AI模型可以由浏览器来提供或操作（按照用户的请求或者应用的请求），也可以完全由客户端应用来提供或操作。
 </p>
 <p>
-同样值得一提的是，随着<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-0" class="internalDFN" id="ref-for-dfn-generatedID-0-6">AI系统</a>快速地得到应用，AI与Web一定会出现更多的交叉领域，从而又可能带来新的系统性的影响。比如，新近刚刚出现的能够将<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-2" class="internalDFN" id="ref-for-dfn-generatedID-2-7">机器学习模型</a>与实时从Web加载的内容相结合的<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-0" class="internalDFN" id="ref-for-dfn-generatedID-0-7">AI系统</a>，可能会导致从更深层次上重新思考Web浏览器在消费或搜索内容方面的角色及用户体验。
+同样值得一提的是，随着[=AI系统=]快速地得到应用，AI与Web一定会出现更多的交叉领域，从而又可能带来新的系统性的影响。比如，新近刚刚出现的能够将[=机器学习模型=]与实时从Web加载的内容相结合的[=AI系统=]，可能会导致从更深层次上重新思考Web浏览器在消费或搜索内容方面的角色及用户体验。
 </p>
 </section>
-<section id="generatedID-3"><div class="header-wrapper"><h2 id="x4"><bdi class="secno">4. </bdi>伦理和社会影响</h2><a class="self-link" href="#generatedID-3" aria-label="Permalink for Section 4."></a></div>
-
+<section>
+<h2>伦理和社会影响</h2>
 
 
 <p>
-<a hreflang="en" href="https://www.w3.org/TR/ethical-web-principles/"><abbr title="World Wide Web Consortium">W3C</abbr>技术架构组的“伦理Web准则”</a>[<cite><a class="bibref" data-link-type="biblio" href="#bib-ethical-web-principles" title="W3C TAG Ethical Web Principles">ethical-web-principles</a></cite>]中有一条是保证“<a hreflang="en" href="https://www.w3.org/TR/ethical-web-principles/#noharm">Web不应该给社会带来危害</a>”。
+<a hreflang="en" href="https://www.w3.org/TR/ethical-web-principles/">W3C技术架构组的“伦理Web准则”</a>[[ethical-web-principles]]中有一条是保证“<a hreflang="en" href="https://www.w3.org/TR/ethical-web-principles/#noharm">Web不应该给社会带来危害</a>”。
 </p>
 <p>
-如上所述，在人工智能最近的发展中，Web已经扮演了一个关键赋能者的角色，而且人工智能的使用和影响也通过借助Web来分发而成倍地增长。这就要求<abbr title="World Wide Web Consortium">W3C</abbr>社区作为Web的管理者必须了解这种混合过程中浮现的潜在危害，并且找到可能解决这些问题的方法。
+如上所述，在人工智能最近的发展中，Web已经扮演了一个关键赋能者的角色，而且人工智能的使用和影响也通过借助Web来分发而成倍地增长。这就要求W3C社区作为Web的管理者必须了解这种混合过程中浮现的潜在危害，并且找到可能解决这些问题的方法。
 </p>
 <p>
-由<a hreflang="en" href="https://www.w3.org/groups/wg/webmachinelearning">Web机器学习工作组</a>率先起草撰写的“<a hreflang="en" href="https://www.w3.org/TR/webmachinelearning-ethics/">机器学习中的伦理原则</a>[<cite><a class="bibref" data-link-type="biblio" href="#bib-webmachinelearning-ethics" title="Ethical Principles for Web Machine Learning">webmachinelearning-ethics</a></cite>]”整合了UNESCO（联合国教育、科学及文化组织）公布的<a hreflang="en" href="https://unesdoc.unesco.org/ark:/48223/pf0000380455">《人工智能伦理问题建议书》</a>[<cite><a class="bibref" data-link-type="biblio" href="#bib-unesco-ai" title="Recommendation on the Ethics of Artificial Intelligence">UNESCO-AI</a></cite>]中的价值观和原则，又增加了“伦理Web准则”中特定于Web的原则，确立了基于Web的机器学习应该遵循的4个价值观和11个原则，这些对本文档的结构也有帮助。
+由<a hreflang="en" href="https://www.w3.org/groups/wg/webmachinelearning">Web机器学习工作组</a>率先起草撰写的“<a hreflang="en" href="https://www.w3.org/TR/webmachinelearning-ethics/">机器学习中的伦理原则</a>[[webmachinelearning-ethics]]”整合了UNESCO（联合国教育、科学及文化组织）公布的<a hreflang="en" href="https://unesdoc.unesco.org/ark:/48223/pf0000380455">《人工智能伦理问题建议书》</a>[[UNESCO-AI]]中的价值观和原则，又增加了“伦理Web准则”中特定于Web的原则，确立了基于Web的机器学习应该遵循的4个价值观和11个原则，这些对本文档的结构也有帮助。
 </p>
-<section id="generatedID-4"><div class="header-wrapper"><h3 id="x4-1"><bdi class="secno">4.1 </bdi>尊重<a hreflang="en" href="https://www.w3.org/TR/webmachinelearning-ethics/#principle-3-autonomy">自治</a>和<a hreflang="en" href="https://www.w3.org/TR/webmachinelearning-ethics/#principle-6-transparency-and-explainability">透明度</a></h3><a class="self-link" href="#generatedID-4" aria-label="Permalink for Section 4.1"></a></div>
+<section>
+<h3>尊重<a hreflang="en" href="https://www.w3.org/TR/webmachinelearning-ethics/#principle-3-autonomy">自治</a>和<a hreflang="en" href="https://www.w3.org/TR/webmachinelearning-ethics/#principle-6-transparency-and-explainability">透明度</a></h3>
+<section>
 
-<section id="ai"><div class="header-wrapper"><h4 id="x4-1-1-ai"><bdi class="secno">4.1.1 </bdi>关于AI生成内容的透明度</h4><a class="self-link" href="#ai" aria-label="Permalink for Section 4.1.1"></a></div>
-
-
+<h4>关于AI生成内容的透明度</h4>
 
 <p>
-最新的<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-0" class="internalDFN" id="ref-for-dfn-generatedID-0-8">AI系统</a>能够辅助人类进行部分或全部内容创作（包括文本、图像、音频和视频），内容的质量在一定程度上（至少表面上来看）是可以接受的，而且在数量上也会超越人类所创作的内容。对于内容创作者而言，这既是机会，又有风险。但更重要的是，这给内容给消费者带来了系统性的风险。因为面对海量AI生成的可接受（其中可能含有错误或者有意误导人的）内容，消费者无法分辨或者找到哪些内容是权威的，哪些内容又是杜撰的。
+最新的[=AI系统=]能够辅助人类进行部分或全部内容创作（包括文本、图像、音频和视频），内容的质量在一定程度上（至少表面上来看）是可以接受的，而且在数量上也会超越人类所创作的内容。对于内容创作者而言，这既是机会，又有风险。但更重要的是，这给内容给消费者带来了系统性的风险。因为面对海量AI生成的可接受（其中可能含有错误或者有意误导人的）内容，消费者无法分辨或者找到哪些内容是权威的，哪些内容又是杜撰的。
 </p>
 <p>
-对最终用户来说，这个需求是非常直接的压力，因为他们作为个体来消费内容的。但同时这个压力也会给到最终用户所使用的代理。通常情况下，搜索引擎会因纯AI生成内容的透明度而受益。而有点令人啼笑皆非的是，用于训练AI模型的爬虫可能也需要这样的信号，因为使用模型的输出来<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-3" class="internalDFN" id="ref-for-dfn-generatedID-3-2">训练</a>模型可能导致意外且没有用的结果。
+对最终用户来说，这个需求是非常直接的压力，因为他们作为个体来消费内容的。但同时这个压力也会给到最终用户所使用的代理。通常情况下，搜索引擎会因纯AI生成内容的透明度而受益。而有点令人啼笑皆非的是，用于训练AI模型的爬虫可能也需要这样的信号，因为使用模型的输出来[=训练=]模型可能导致意外且没有用的结果。
 </p>
 <p>
-关于如何保证（比如通过密码）某个内容是不是（部分或者全部）通过<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-0" class="internalDFN" id="ref-for-dfn-generatedID-0-9">AI系统</a>生成的，我们并不知道什么可行的方案。这个方案的缺失很遗憾会造成谣言或垃圾满天飞的系统性风险，而这正是为了<abbr title="World Wide Web Consortium">W3C</abbr>这个内容分发平台乃至整个社会的健康而应该严重关切的问题。
+关于如何保证（比如通过密码）某个内容是不是（部分或者全部）通过[=AI系统=]生成的，我们并不知道什么可行的方案。这个方案的缺失很遗憾会造成谣言或垃圾满天飞的系统性风险，而这正是为了W3C这个内容分发平台乃至整个社会的健康而应该严重关切的问题。
 </p>
-<div id="b1" class="advisement">
+<div id=b1 class=advisement>
 <p>
-在这个领域中，标准能够扮演的一个貌似合理的角色是至少能够加快<strong>内容标注</strong>的进程，通过标注来表明内容是否是<strong>计算机生成流程</strong>的结果。虽然这种标注不可能通过技术手段强制实施，但如果能够由<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-0" class="internalDFN" id="ref-for-dfn-generatedID-0-10">AI系统</a>自动添加（至少大规模删除的成本有足够的阻力），同时又是一种监管的手段，是有可能得到广泛采用的。
+在这个领域中，标准能够扮演的一个貌似合理的角色是至少能够加快<strong>内容标注</strong>的进程，通过标注来表明内容是否是<strong>计算机生成流程</strong>的结果。虽然这种标注不可能通过技术手段强制实施，但如果能够由[=AI系统=]自动添加（至少大规模删除的成本有足够的阻力），同时又是一种监管的手段，是有可能得到广泛采用的。
 </p>
 <p>
 这个领域已经出现了一些提案，这些提案如何能够得到更多关注、讨论，以及最终成规模地部署就更好了：
@@ -459,44 +217,44 @@ Web扮演的主要角色是作为一个平台让内容创作者向内容消费�
 </p>
 <ul>
 
-<li><a hreflang="en" href="https://c2pa.org/specifications/specifications/1.3/ai-ml/ai_ml.html">C2PA关于AI和机器学习的指南</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-c2pa-ai" title="Guidance for Artificial Intelligence and Machine Learning">C2PA-AI</a></cite>]
+<li><a hreflang="en" href="https://c2pa.org/specifications/specifications/1.3/ai-ml/ai_ml.html">C2PA关于AI和机器学习的指南</a> [[C2PA-AI]]
 
-</li><li><a hreflang="en" href="https://iptc.org/news/iptc-releases-draft-of-digital-source-type-vocabulary-to-support-synthetic-media/">IPTC合成媒体</a>[<cite><a class="bibref" data-link-type="biblio" href="#bib-iptc-dst" title="Digital Source Type vocabulary">IPTC-DST</a></cite>]及其在<a hreflang="en" href="https://github.com/schemaorg/schemaorg/issues/3392">Schema.org</a>[<cite><a class="bibref" data-link-type="biblio" href="#bib-schema-org" title="Schema.org">schema-org</a></cite>]中对应的表示
+<li><a hreflang="en" href="https://iptc.org/news/iptc-releases-draft-of-digital-source-type-vocabulary-to-support-synthetic-media/">IPTC合成媒体</a>[[IPTC-DST]]及其在<a hreflang="en" href="https://github.com/schemaorg/schemaorg/issues/3392">Schema.org</a>[[schema-org]]中对应的表示
 
-</li><li>[<cite><a class="bibref" data-link-type="biblio" href="#bib-html" title="HTML Standard">HTML</a></cite>]的<a hreflang="en" href="https://github.com/whatwg/html/issues/9479">建议：AI生成内容的元标签</a>（单人提交）
+<li>[[HTML]]的<a hreflang="en" href="https://github.com/whatwg/html/issues/9479">建议：AI生成内容的元标签</a>（单人提交）
 </li>
 </ul>
 </div>
 </section>
-<section id="ai-0"><div class="header-wrapper"><h4 id="x4-1-2-ai"><bdi class="secno">4.1.2 </bdi>AI介入服务的透明度</h4><a class="self-link" href="#ai-0" aria-label="Permalink for Section 4.1.2"></a></div>
-
+<section>
+<h4>AI介入服务的透明度</h4>
 
 
 <p>
-依赖于<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-2" class="internalDFN" id="ref-for-dfn-generatedID-2-8">机器学习模型</a>提供服务有一个众所周知的问题，就是可能吸收甚至可能强化<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-3" class="internalDFN" id="ref-for-dfn-generatedID-3-3">训练</a>数据中存在的<a hreflang="en" href="https://www.w3.org/TR/webmachinelearning-ethics/#bias">偏见</a>。偏见在其他算法和人类决策流程中也很常见。但对<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-0" class="internalDFN" id="ref-for-dfn-generatedID-0-11">AI系统</a>而言这是一个更大的挑战，因为由于当下的这些模型很大程度上是像一个盒子一样封闭运行的，所以很难审计和纠正。
+依赖于[=机器学习模型=]提供服务有一个众所周知的问题，就是可能吸收甚至可能强化[=训练=]数据中存在的<a hreflang="en" href="https://www.w3.org/TR/webmachinelearning-ethics/#bias">偏见</a>。偏见在其他算法和人类决策流程中也很常见。但对[=AI系统=]而言这是一个更大的挑战，因为由于当下的这些模型很大程度上是像一个盒子一样封闭运行的，所以很难审计和纠正。
 </p>
 <p>
-这种偏见会在更大程度上影响那些期望的输入和输出在训练数据中没有被充分代表的用户（正如<a hreflang="en" href="https://www.w3.org/WAI/research/ai2023/">2023 AI与无障碍研究专题研讨会所报告的</a>[<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-ai" title="Artificial Intelligence (AI) and Accessibility Research Symposium 2023">WAI-AI</a></cite>]）。而凭直觉就很容易联想到那些已经被社会和技术所抛弃的人。比如，假设你的语言、外表或行为不符合主流预期的规范，就不太可能被主流内容关注，因而就不太可能在训练数据中出现，或者即使出现也是被歪曲的。
+这种偏见会在更大程度上影响那些期望的输入和输出在训练数据中没有被充分代表的用户（正如<a hreflang="en" href="https://www.w3.org/WAI/research/ai2023/">2023 AI与无障碍研究专题研讨会所报告的</a>[[WAI-AI]]）。而凭直觉就很容易联想到那些已经被社会和技术所抛弃的人。比如，假设你的语言、外表或行为不符合主流预期的规范，就不太可能被主流内容关注，因而就不太可能在训练数据中出现，或者即使出现也是被歪曲的。
 </p>
 <p>
 在更好的至少能够系统检测这种偏见的工具出现之前，鼓励和推动系统性地信息发布，包括是否使用了机器学习模型、这些模型是如何训练和检测偏见的，应该能够对最终用户选择自己要使用的服务提供更多有益的帮助（当然，前提是用户必须能够选择，比如不适用于某些政府提供的服务）。
 </p>
-<div id="b2" class="advisement">
+<div id=b2 class=advisement>
 <p>
-“<a hreflang="en" href="https://arxiv.org/pdf/1810.03993.pdf">针对模型报告的模型卡（Model cards for Model Reporting）</a>”[<cite><a class="bibref" data-link-type="biblio" href="#bib-model-cards" title="Model Cards for Model Reporting">MODEL-CARDS</a></cite>]就是这样一个手段，我们曾在<a hreflang="en" href="https://www.w3.org/2020/06/machine-learning-workshop/report.html#user">2020 <abbr title="World Wide Web Consortium">W3C</abbr>关于Web与机器学习研讨会上讨论过</a>[<cite><a class="bibref" data-link-type="biblio" href="#bib-w3c-ml-ws" title="W3C Workshop Report on Web and Machine Learning">W3C-ML-WS</a></cite>]。假设这个报告能够提供有意义和可行的透明度，那么对（这个）技术标准提出的问题就是，应该如何<strong>将这些卡序列化并使其在Web上可被发现</strong>。
+“<a hreflang="en" href="https://arxiv.org/pdf/1810.03993.pdf">针对模型报告的模型卡（Model cards for Model Reporting）</a>”[[MODEL-CARDS]]就是这样一个手段，我们曾在<a hreflang="en" href="https://www.w3.org/2020/06/machine-learning-workshop/report.html#user">2020 W3C关于Web与机器学习研讨会上讨论过</a>[[W3C-ML-WS]]。假设这个报告能够提供有意义和可行的透明度，那么对（这个）技术标准提出的问题就是，应该如何<strong>将这些卡序列化并使其在Web上可被发现</strong>。
 </p>
 </div>
-<div id="b3" class="advisement">
+<div id=b3 class=advisement>
 <p>
-<abbr title="World Wide Web Consortium">W3C</abbr>应该关注一种特殊的模型部署方式，即<strong>浏览器引擎本身使用的用于响应API请求的模型</strong>。很多Web浏览器API已经（或多或少明确地）暴露了<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-2" class="internalDFN" id="ref-for-dfn-generatedID-2-9">机器学习模型</a>的输出：
+W3C应该关注一种特殊的模型部署方式，即<strong>浏览器引擎本身使用的用于响应API请求的模型</strong>。很多Web浏览器API已经（或多或少明确地）暴露了[=机器学习模型=]的输出：
 </p>
 <ul>
 
-<li><a hreflang="en" href="https://wicg.github.io/speech-api/">Web语音API（Web Speech API）</a>[<cite><a class="bibref" data-link-type="biblio" href="#bib-speech-api" title="Web Speech API">SPEECH-API</a></cite>]；
+<li><a hreflang="en" href="https://wicg.github.io/speech-api/">Web语音API（Web Speech API）</a>[[SPEECH-API]]；
 
-</li><li><a hreflang="en" href="https://wicg.github.io/shape-detection-api/">加速形状检测API（Accelerated Shape Detection API）</a>[<cite><a class="bibref" data-link-type="biblio" href="#bib-shape-detection-api" title="Accelerated Shape Detection in Images">SHAPE-DETECTION-API</a></cite>]；
+<li><a hreflang="en" href="https://wicg.github.io/shape-detection-api/">加速形状检测API（Accelerated Shape Detection API）</a>[[SHAPE-DETECTION-API]]；
 
-</li><li><a hreflang="en" href="https://w3c.github.io/mediacapture-extensions/#exposing-mediastreamtrack-source-background-blur-support">媒体捕获中的背景模糊、人脸检测、注视矫正控制</a>。
+<li><a hreflang="en" href="https://w3c.github.io/mediacapture-extensions/#exposing-mediastreamtrack-source-background-blur-support">媒体捕获中的背景模糊、人脸检测、注视矫正控制</a>。
 </li>
 </ul>
 </div>
@@ -506,8 +264,8 @@ Web扮演的主要角色是作为一个平台让内容创作者向内容消费�
 </section>
 </section>
 
-<section id="generatedID-5"><div class="header-wrapper"><h3 id="x4-2"><bdi class="secno">4.2 </bdi><a hreflang="en" href="https://www.w3.org/TR/webmachinelearning-ethics/#principle-4-right-to-privacy-and-data-protection">隐私权和数据保护</a></h3><a class="self-link" href="#generatedID-5" aria-label="Permalink for Section 4.2"></a></div>
-
+<section>
+<h3><a hreflang="en" href="https://www.w3.org/TR/webmachinelearning-ethics/#principle-4-right-to-privacy-and-data-protection">隐私权和数据保护</a></h3>
 
 <p>
 如果模型是在没有经过分类或只部分经过分类的Web内容上进行训练的，那么这些模型很可能会包含个人可识别信息（Personally Identifiable Information，PII）。同样，对于在用户选择与服务提供商共享（无论是否允许公众使用）的数据上训练的模型也是一个道理。这些模型有可能经常为知道如何提问的用户检索并向他们共享用户信息。而这不符合那些被收集个人信息的用户对隐私的预期，而且可能违反很多司法管辖区的隐私法规。更糟糕的是，这也会带来新型攻击的风险（参见“安全与安保”）。
@@ -516,56 +274,56 @@ Web扮演的主要角色是作为一个平台让内容创作者向内容消费�
   虽然在内容创作方面讨论的排除规则有可能在某种程度上对第一种情形有帮助，但对第二种情形则无能为力。这个问题领域很可能面临严格的监管和法律审查。
   </p>
   <p>
-  从技术标准化的角度来看，除了标注内容，用户数据又被用于模型<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-3" class="internalDFN" id="ref-for-dfn-generatedID-3-4">训练</a>的现象以及由此引发的一些反弹，可能让（来自用户和服务提供商的）对于分布式架构的呼吁卷土重来，使用户数据较少受到集中控制（最近Activity Streams的应用范围不断扩大就说明了这一点）。
+  从技术标准化的角度来看，除了标注内容，用户数据又被用于模型[=训练=]的现象以及由此引发的一些反弹，可能让（来自用户和服务提供商的）对于分布式架构的呼吁卷土重来，使用户数据较少受到集中控制（最近Activity Streams的应用范围不断扩大就说明了这一点）。
   </p>
-<div id="b4" class="advisement">
+<div id=b4 class=advisement>
   <p>这种模式的一个特别典型的例子，就是最近出现的所谓<strong>个人数据存储</strong>：通过更加清晰地区分数据存储与数据处理的角色（在传统云基础设施下，通常完全由一个角色来处理），为用户提供更多方式更加细粒度地控制自己的数据。
 </p>
 
 <p>
-这个话题最近在<abbr title="World Wide Web Consortium">W3C</abbr>已经通过2023年底<a hreflang="en" href="https://lists.w3.org/Archives/Public/public-new-work/2023Sep/0007.html">SOLID工作组建议的章程</a>有所显现（<abbr title="World Wide Web Consortium">W3C</abbr>社区已经认可该章程的重要性，但尚未达成共识）。
+这个话题最近在W3C已经通过2023年底<a hreflang="en" href="https://lists.w3.org/Archives/Public/public-new-work/2023Sep/0007.html">SOLID工作组建议的章程</a>有所显现（W3C社区已经认可该章程的重要性，但尚未达成共识）。
 </p>
 </div>
 <p>
-允许在个人数据之上<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-4" class="internalDFN" id="ref-for-dfn-generatedID-4-2">运行</a>模型同时又不必把数据上传到服务器，正是浏览器<a hreflang="en" href="https://www.w3.org/TR/webnn/">Web神经网络API（Web Neural Network API）</a>[<cite><a class="bibref" data-link-type="biblio" href="#bib-webnn" title="Web Neural Network API">WEBNN</a></cite>]背后的动机之一。这套API是对<a hreflang="en" href="https://www.w3.org/groups/wg/wasm/">WebAssembly</a>[<cite><a class="bibref" data-link-type="biblio" href="#bib-wasm-core-2" title="WebAssembly Core Specification">WASM-CORE-2</a></cite>]和<a hreflang="en" href="https://www.w3.org/groups/wg/gpu/">WebGPU</a>[<cite><a class="bibref" data-link-type="biblio" href="#bib-webgpu" title="WebGPU">WEBGPU</a></cite>]已经提供的计算能力的补充，提供了额外的特定于机器学习的优化，以便模型能够在浏览器（也就是在最终用户的设备上）高效<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-4" class="internalDFN" id="ref-for-dfn-generatedID-4-3">运行</a>。
+允许在个人数据之上[=运行=]模型同时又不必把数据上传到服务器，正是浏览器<a hreflang="en" href="https://www.w3.org/TR/webnn/">Web神经网络API（Web Neural Network API）</a>[[WEBNN]]背后的动机之一。这套API是对<a hreflang="en" href="https://www.w3.org/groups/wg/wasm/">WebAssembly</a>[[WASM-CORE-2]]和<a hreflang="en" href="https://www.w3.org/groups/wg/gpu/">WebGPU</a>[[WEBGPU]]已经提供的计算能力的补充，提供了额外的特定于机器学习的优化，以便模型能够在浏览器（也就是在最终用户的设备上）高效[=运行=]。
 </p>
 
 </section>
-<section id="generatedID-6"><div class="header-wrapper"><h3 id="x4-3"><bdi class="secno">4.3 </bdi><a hreflang="en" href="https://www.w3.org/TR/webmachinelearning-ethics/#principle-5-safety-and-security">安全与安保</a></h3><a class="self-link" href="#generatedID-6" aria-label="Permalink for Section 4.3"></a></div>
-
+<section>
+<h3><a hreflang="en" href="https://www.w3.org/TR/webmachinelearning-ethics/#principle-5-safety-and-security">安全与安保</a></h3>
 
 
 <p>
-很多<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-2" class="internalDFN" id="ref-for-dfn-generatedID-2-10">机器学习模型</a>都能够以非常低的成本模仿人类生成质量可以接受文本甚至视频（实时的或录制的）。这就显著放大了网络钓鱼和其他网络诈骗得逞的风险，同时也很大程度上提高了通过在线交际建立信任的门槛。如果用户对自己在数字化媒介中进行交际不再有安全感，那么Web将无法再扮演这种交际平台的角色。
+很多[=机器学习模型=]都能够以非常低的成本模仿人类生成质量可以接受文本甚至视频（实时的或录制的）。这就显著放大了网络钓鱼和其他网络诈骗得逞的风险，同时也很大程度上提高了通过在线交际建立信任的门槛。如果用户对自己在数字化媒介中进行交际不再有安全感，那么Web将无法再扮演这种交际平台的角色。
 </p>
-<div id="b5" class="advisement">
+<div id=b5 class=advisement>
 <p>
-这就对在Web上实现<strong>可靠身份与凭据管理</strong>产生了更加强烈的需求。<a hreflang="en" href="https://www.w3.org/2017/vc/WG/">可验证凭据工作组（Verifiable Credentials Working Group）</a>的工作能够让凭据以密码级安全、保留隐私，以及机器可验证的方式进行表示 [<cite><a class="bibref" data-link-type="biblio" href="#bib-vc-data-model" title="Verifiable Credentials Data Model v1.1">VC-DATA-MODEL</a></cite>]。而<a hreflang="en" href="https://lists.w3.org/Archives/Public/public-new-work/2024Jan/0006.html">把联合身份（Federated Identity）系统更好地集成到浏览器中</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-fedcm" title="Federated Credential Management API">FEDCM</a></cite>]，以及<a hreflang="en" href="https://wicg.github.io/digital-identities/">刚出现的将数据凭据在Web内容中公开化</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-digital-credentials" title="Digital Credentials">DIGITAL-CREDENTIALS</a></cite>] 的建议能够在某种程度上降低与这些新的模仿人类的威胁相关的风险。
+这就对在Web上实现<strong>可靠身份与凭据管理</strong>产生了更加强烈的需求。<a hreflang="en" href="https://www.w3.org/2017/vc/WG/">可验证凭据工作组（Verifiable Credentials Working Group）</a>的工作能够让凭据以密码级安全、保留隐私，以及机器可验证的方式进行表示 [[VC-DATA-MODEL]]。而<a hreflang="en" href="https://lists.w3.org/Archives/Public/public-new-work/2024Jan/0006.html">把联合身份（Federated Identity）系统更好地集成到浏览器中</a> [[FEDCM]]，以及<a hreflang="en" href="https://wicg.github.io/digital-identities/">刚出现的将数据凭据在Web内容中公开化</a> [[DIGITAL-CREDENTIALS]] 的建议能够在某种程度上降低与这些新的模仿人类的威胁相关的风险。
 </p>
 </div>
 </section>
-<section id="generatedID-7"><div class="header-wrapper"><h3 id="x4-4"><bdi class="secno">4.4 </bdi><a hreflang="en" href="https://www.w3.org/TR/webmachinelearning-ethics/#principle-8-sustainability">可持续性</a></h3><a class="self-link" href="#generatedID-7" aria-label="Permalink for Section 4.4"></a></div>
-
+<section>
+<h3><a hreflang="en" href="https://www.w3.org/TR/webmachinelearning-ethics/#principle-8-sustainability">可持续性</a></h3>
 
 <p>
-很显然，<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-3" class="internalDFN" id="ref-for-dfn-generatedID-3-5">训练</a>和<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-4" class="internalDFN" id="ref-for-dfn-generatedID-4-4">运行</a><a data-link-type="dfn|abstract-op" href="#dfn-generatedID-2" class="internalDFN" id="ref-for-dfn-generatedID-2-11">机器学习模型</a>需要消耗大量资源，特别是要消耗大量电力和水。减少人类对自然资源占用的使命也应该特别明确地适用于通过标准化能够有助于其大规模部署的技术。
+很显然，[=训练=]和[=运行=][=机器学习模型=]需要消耗大量资源，特别是要消耗大量电力和水。减少人类对自然资源占用的使命也应该特别明确地适用于通过标准化能够有助于其大规模部署的技术。
 </p>
 <p>
 <a hreflang="en" href="https://www.w3.org/community/sustyweb/">可持续Web设计社区组（Sustainable Web Design Community Group）</a>（<a hreflang="en" href="https://lists.w3.org/Archives/Public/public-new-work/2024Mar/0000.html">有望成为标准化工作组</a>）有一项相对比较新但很有前景的工作，解释了如何<a hreflang="en" href="https://www.w3.org/blog/2023/introducing-web-sustainability-guidelines/">以可持续的方式使用Web技术</a>。
 </p>
-<div id="b6" class="advisement">
+<div id=b6 class=advisement>
 <p>
-<abbr title="World Wide Web Consortium">W3C</abbr>仍然缺少一个完善的<strong>评估其标准对环境所产生影响的框架</strong>。鉴于有据可查的<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-0" class="internalDFN" id="ref-for-dfn-generatedID-0-12">AI系统</a>对环境的高度影响，<abbr title="World Wide Web Consortium">W3C</abbr>中那些预期会加速<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-2" class="internalDFN" id="ref-for-dfn-generatedID-2-12">机器学习模型</a>部署的小组，在探索和记录他们的工作对环境有哪些预期影响，以及他们能够找到哪些可能的应对方案方面采取积极主动的态度会变得非常重要。
+W3C仍然缺少一个完善的<strong>评估其标准对环境所产生影响的框架</strong>。鉴于有据可查的[=AI系统=]对环境的高度影响，W3C中那些预期会加速[=机器学习模型=]部署的小组，在探索和记录他们的工作对环境有哪些预期影响，以及他们能够找到哪些可能的应对方案方面采取积极主动的态度会变得非常重要。
 </p>
 </div>
 </section>
-<section id="generatedID-8"><div class="header-wrapper"><h3 id="x4-5"><bdi class="secno">4.5 </bdi>平衡内容创作者激励与消费者权益</h3><a class="self-link" href="#generatedID-8" aria-label="Permalink for Section 4.5"></a></div>
+<section>
 
-
+<h3>平衡内容创作者激励与消费者权益</h3>
 
 
 <p>
-人们已经知道或已经假定，一些规模最大且最受瞩目的<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-2" class="internalDFN" id="ref-for-dfn-generatedID-2-13">机器学习模型</a>在没有创作者或发布者明确同意的情况下，使用了从Web爬取的数据进行训练。
+人们已经知道或已经假定，一些规模最大且最受瞩目的[=机器学习模型=]在没有创作者或发布者明确同意的情况下，使用了从Web爬取的数据进行训练。
 </p>
 <p>
 因此引发的争议正在从版权法的角度进行辩论（也有一些仲裁的例子）。
@@ -574,7 +332,7 @@ Web扮演的主要角色是作为一个平台让内容创作者向内容消费�
 我们不知道这种特定的使用场景能否适用版权法规，以及适用什么样的版权法规。除了法律上的考虑，版权机制能够在创作者和消费者之间营造一种（相对而言）共同的认知，即默认情况下，未经创作者同意，内容不能被重新分发、合成、改编或构建。这个共同认知让大量内容在Web上开放地分发成为可能。同时也让创作者能够在消费者始终都会来到自己页面的假定之下斟酌使用各种变现手段（订阅、付费阅读、广告）。
 </p>
 <p>
-很多<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-0" class="internalDFN" id="ref-for-dfn-generatedID-0-13">AI系统</a>都整合了(1)对Web内容的自动化大规模消费，以及(2)大规模内容的生产，却从来没有意识到或者说考虑过回报那些用来训练的内容。
+很多[=AI系统=]都整合了(1)对Web内容的自动化大规模消费，以及(2)大规模内容的生产，却从来没有意识到或者说考虑过回报那些用来训练的内容。
 </p>
 <p>
 尽管这种紧张的气氛并不新鲜（下面会讨论到），但基于机器学习的系统无疑将颠覆已有的平衡。除非能够找到一个新的可持续的平衡点，否则将会给Web带来如下不良影响。
@@ -582,27 +340,27 @@ Web扮演的主要角色是作为一个平台让内容创作者向内容消费�
 <ul>
 
 <li>开放分发的内容明显变少（可能对不那么富裕的人产生更大影响）。
-</li><li>一个不那么吸引人的内容分发平台。
+<li>一个不那么吸引人的内容分发平台。
 </li>
 </ul>
 <p>
 为了重新平衡这种情况而作出改变的版权法规也可能带来一些间接风险，即在限制内容消费者的权力的同时，也会削弱以内容分发作为核心主张的Web平台的价值。
 </p>
-<section id="generatedID-9"><div class="header-wrapper"><h4 id="x4-5-1"><bdi class="secno">4.5.1 </bdi>与搜索引擎的比较</h4><a class="self-link" href="#generatedID-9" aria-label="Permalink for Section 4.5.1"></a></div>
-
+<section>
+<h4>与搜索引擎的比较</h4>
 
 
 <p>
 考虑到搜索引擎在Web平台上所扮演的中心角色，不难理解围绕大规模爬取Web内容的重用而出现的很多激烈争论其实有着悠久的历史。搜索引擎具有对Web上的内容进行检索和组织的能力，因而提供（同时也拥有）了价值。但这个价值高度依赖于构建Web内容的标准化基础设施。
 </p>
 <p>
-搜索引擎与内容提供者之间多多少少已经达成了隐式契约，即搜索引擎可以对来自提供者的内容进行检索、解析以及只展示一部分内容。相应地，搜索引擎将为内容来源提供更多曝光机会和流量。进一步的共识也已经基于Web的运行方式确定下来，让这个隐式契约成为任何在Web上公开发布内容的人的默认选项，也就是通过<a hreflang="en" href="https://www.rfc-editor.org/rfc/rfc9309.html"><code>robots.txt</code>指令</a>[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc9309" title="Robots Exclusion Protocol">RFC9309</a></cite>]编码的一种退出机制。
+搜索引擎与内容提供者之间多多少少已经达成了隐式契约，即搜索引擎可以对来自提供者的内容进行检索、解析以及只展示一部分内容。相应地，搜索引擎将为内容来源提供更多曝光机会和流量。进一步的共识也已经基于Web的运行方式确定下来，让这个隐式契约成为任何在Web上公开发布内容的人的默认选项，也就是通过<a hreflang="en" href="https://www.rfc-editor.org/rfc/rfc9309.html"><code>robots.txt</code>指令</a>[[RFC9309]]编码的一种退出机制。
 </p>
 <p>
 随着时间推移，除了通过用户查询来匹配网站链接之外，搜索引擎还集成了更多直接暴露目标网站内容的方式。包括使用富媒体片段（典型的做法是利用schema.org的元数据），以及实现嵌入式的预览组件（比如像<a hreflang="en" href="https://amp.dev/">AMP项目</a>的组件）。这些变化在发生的同时，有时候也会引发质疑的讨论，焦点是如何平衡给爬取内容更多曝光量的同时又不会降低最终用户访问来源网站的积极性（因为他们在搜索结果页就已经得到足够多的信息了）。
 </p>
 <p>
-在某些情况下，<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-0" class="internalDFN" id="ref-for-dfn-generatedID-0-14">AI系统</a>被用来替代或补充完成人们以前通常使用搜索引擎来完成的工作（实际上也越来越多地被集成到搜索引擎界面上）。因此，探索搜索引擎与内容创作者的需求平衡演进的过程能够在多大程度上启发关于爬虫用于训练<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-2" class="internalDFN" id="ref-for-dfn-generatedID-2-14">机器学习模型</a>的讨论看起来是有用的。
+在某些情况下，[=AI系统=]被用来替代或补充完成人们以前通常使用搜索引擎来完成的工作（实际上也越来越多地被集成到搜索引擎界面上）。因此，探索搜索引擎与内容创作者的需求平衡演进的过程能够在多大程度上启发关于爬虫用于训练[=机器学习模型=]的讨论看起来是有用的。
 </p>
 <p>
 为了进行比较，有必要明确它们的区别。
@@ -610,462 +368,58 @@ Web扮演的主要角色是作为一个平台让内容创作者向内容消费�
 <ul>
 
 <li>
-内容创作者与搜索引擎爬虫的隐式契约（也就是会增加他们的曝光量），对于被集成到<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-0" class="internalDFN" id="ref-for-dfn-generatedID-0-15">AI系统</a>的内容而言并没有一个系统性的等效对应物。虽然有些系统具备了在给定<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-4" class="internalDFN" id="ref-for-dfn-generatedID-4-5">推理</a>中指出训练数据来源的能力，但这种能力很难成为此类系统的一个普遍功能，而且也不一定能够得到系统性的应用（比如，针对生成的图片给出训练源的链接有什么意义呢？）。即使能够做到，相比典型的搜索引擎结果页，其展示的来源可能会更少，相应地对用户跟随链接的刺激也会更小。
+内容创作者与搜索引擎爬虫的隐式契约（也就是会增加他们的曝光量），对于被集成到[=AI系统=]的内容而言并没有一个系统性的等效对应物。虽然有些系统具备了在给定[=推理=]中指出训练数据来源的能力，但这种能力很难成为此类系统的一个普遍功能，而且也不一定能够得到系统性的应用（比如，针对生成的图片给出训练源的链接有什么意义呢？）。即使能够做到，相比典型的搜索引擎结果页，其展示的来源可能会更少，相应地对用户跟随链接的刺激也会更小。
 </li>
 <li><code>robots.txt</code>指令支持基于用户代理向特定的爬虫下发特定的规则。虽然对于众所周知的搜索引擎爬虫来说，这个方法能实际起到管理的作用（无论效果是好是坏），但指望内容创作者去维护一份预期要允许或屏蔽哪些以检索训练数据为目的、数量快速增长的爬虫列表，应该是不太现实且无法持续的。
 </li>
 </ul>
 <p>
-鉴于人们对<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-0" class="internalDFN" id="ref-for-dfn-generatedID-0-16">AI系统</a>相关爬取行为可能有着不同的预期，目前尚不清楚从早期Web继承而来的这种无许可模式（robots.txt是1994年设计的）是否能够满足在Web上发布内容的长期可持续性目标（但其本身对AI爬虫应该会长期关注的）。
+鉴于人们对[=AI系统=]相关爬取行为可能有着不同的预期，目前尚不清楚从早期Web继承而来的这种无许可模式（robots.txt是1994年设计的）是否能够满足在Web上发布内容的长期可持续性目标（但其本身对AI爬虫应该会长期关注的）。
 </p>
-<div id="b7" class="advisement">
+<div id=b7 class=advisement>
 <p>
 一般来说，对于在这个领域寻求标准化的一个可能有用的建议，就是识别能够帮助<strong>内容生产者和AI爬虫找到可接受的条件，理想情况下在一定范围内</strong>对各方都具有吸引力的解决方案。
 </p>
 <p>
-有一些组和个人已经开始探索如何让内容发布者表达自己希望怎么让自己的内容用于<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-3" class="internalDFN" id="ref-for-dfn-generatedID-3-6">训练</a><a data-link-type="dfn|abstract-op" href="#dfn-generatedID-2" class="internalDFN" id="ref-for-dfn-generatedID-2-15">机器学习模型</a>的意愿。
+有一些组和个人已经开始探索如何让内容发布者表达自己希望怎么让自己的内容用于[=训练=][=机器学习模型=]的意愿。
 </p>
 <ul>
 
-<li><a hreflang="en" href="https://www.w3.org/groups/cg/tdmrep">文本与数据挖掘保留协议社区组（Text and Data Mining Reservation Protocol Community Group）</a>制定了“<a hreflang="en" href="https://www.w3.org/community/reports/tdmrep/CG-FINAL-tdmrep-20240202/">TDM Reservation Protocol (TDMRep)</a>” [<cite><a class="bibref" data-link-type="biblio" href="#bib-tdmrep" title="Final Community Group Report">TDMRep</a></cite>]，以“表达适用于合法使用Web内容进行文本及数据挖掘相关权限的保留”。
+<li><a hreflang="en" href="https://www.w3.org/groups/cg/tdmrep">文本与数据挖掘保留协议社区组（Text and Data Mining Reservation Protocol Community Group）</a>制定了“<a hreflang="en" href="https://www.w3.org/community/reports/tdmrep/CG-FINAL-tdmrep-20240202/">TDM Reservation Protocol (TDMRep)</a>” [[TDMRep]]，以“表达适用于合法使用Web内容进行文本及数据挖掘相关权限的保留”。
 
-</li><li>IETF围绕更新robots.txt指令的讨论已经开始，尤其是<a hreflang="en" href="https://www.w3.org/community/robotstxt/">更新robots.txt社区组</a>提议给robots.txt指令增加一个选择加入机制。
+<li>IETF围绕更新robots.txt指令的讨论已经开始，尤其是<a hreflang="en" href="https://www.w3.org/community/robotstxt/">更新robots.txt社区组</a>提议给robots.txt指令增加一个选择加入机制。
 </li>
 </ul>
 </div>
 </section>
 </section>
 </section>
-<section id="ai-1"><div class="header-wrapper"><h2 id="interop"><bdi class="secno">5. </bdi><a data-link-type="dfn|abstract-op" href="#dfn-generatedID-0" class="internalDFN" id="ref-for-dfn-generatedID-0-17">AI系统</a>对互用性的影响</h2><a class="self-link" href="#interop" aria-label="Permalink for Section 5."></a></div>
-
+<section>
+<h2 id=interop>[=AI系统=]对互用性的影响</h2>
 
 
 <p>
-在<a hreflang="en" href="https://www.w3.org/TR/w3c-vision/#vision-web"><abbr title="World Wide Web Consortium">W3C</abbr>对Web的构想</a>[<cite><a class="bibref" data-link-type="biblio" href="#bib-w3c-vision" title="Vision for W3C">w3c-vision</a></cite>]中，一个核心就是确保Web基于互用原则发展。换句话说，<abbr title="World Wide Web Consortium">W3C</abbr>对于作为Web标准编制的技术，要确保它们的实现和部署都能够以跨产品一致的方式进行，从而为用户提供更多选择，同时促进内容长期可用。
+在<a hreflang="en" href="https://www.w3.org/TR/w3c-vision/#vision-web">W3C对Web的构想</a>[[w3c-vision]]中，一个核心就是确保Web基于互用原则发展。换句话说，W3C对于作为Web标准编制的技术，要确保它们的实现和部署都能够以跨产品一致的方式进行，从而为用户提供更多选择，同时促进内容长期可用。
 </p>
 <p>
-在互用能力依赖的算法具有确定性的情况下，保证互用能力的关键是尽可能充分地描述细节，保证相关算法的清晰，同时在产品上运行足够多的测试以验证达到了预期的结果。向更加<a hreflang="en" href="https://www.w3.org/TR/design-principles/#algorithms">算法性的规范</a>[<cite><a class="bibref" data-link-type="biblio" href="#bib-design-principles" title="Web Platform Design Principles">design-principles</a></cite>]转变，以及全面自动化测试（比如通过<a hreflang="en" href="https://web-platform-tests.org/">Web平台测试项目</a>）很大程度上都是由提供可靠的互用平台这一目标驱动的。
+在互用能力依赖的算法具有确定性的情况下，保证互用能力的关键是尽可能充分地描述细节，保证相关算法的清晰，同时在产品上运行足够多的测试以验证达到了预期的结果。向更加<a hreflang="en" href="https://www.w3.org/TR/design-principles/#algorithms">算法性的规范</a>[[design-principles]]转变，以及全面自动化测试（比如通过<a hreflang="en" href="https://web-platform-tests.org/">Web平台测试项目</a>）很大程度上都是由提供可靠的互用平台这一目标驱动的。
 </p>
-<div id="b8" class="advisement">
+<div id=b8 class=advisement>
 <p>
-如上面所讨论的，<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-2" class="internalDFN" id="ref-for-dfn-generatedID-2-16">机器学习模型</a>已经在标准的Web API中出现了。这给我们的互用性目标的实现带来了两方面挑战。
+如上面所讨论的，[=机器学习模型=]已经在标准的Web API中出现了。这给我们的互用性目标的实现带来了两方面挑战。
 </p>
 <ul>
 
-<li><a data-link-type="dfn|abstract-op" href="#dfn-generatedID-2" class="internalDFN" id="ref-for-dfn-generatedID-2-17">机器学习模型</a>多数并非基于或者按照一系列算法步骤构建和描述的。如果某个标准化的行为最适合<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-2" class="internalDFN" id="ref-for-dfn-generatedID-2-18">机器学习模型</a>来实现，那么应该如何规定该行为？应该测试到什么程度，才足以验证<strong>跨使用不同模型的产品具有互用能力这个结果</strong>？它对浏览器的指纹面（fingerprinting surface）会产生什么影响？
+<li>[=机器学习模型=]多数并非基于或者按照一系列算法步骤构建和描述的。如果某个标准化的行为最适合[=机器学习模型=]来实现，那么应该如何规定该行为？应该测试到什么程度，才足以验证<strong>跨使用不同模型的产品具有互用能力这个结果</strong>？它对浏览器的指纹面（fingerprinting surface）会产生什么影响？
 </li>
 
-<li>很多重要的<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-2" class="internalDFN" id="ref-for-dfn-generatedID-2-19">机器学习模型</a>都不是确定性的。如果或者说当其中某些<strong>非确定性模型</strong>通过标准化API暴露出来，那么这个一致性问题就不再局限于使用两个不同模型的两个产品了。因为给定的输入不会再产生一个提前确定的输出。目前，我们尚不清楚如何基于非确定性模型来定义互用行为，这有可能导致此类模型是否应该作为互用实现的一部分被接受，以及如果可以接受又该如何接受的问题。
+<li>很多重要的[=机器学习模型=]都不是确定性的。如果或者说当其中某些<strong>非确定性模型</strong>通过标准化API暴露出来，那么这个一致性问题就不再局限于使用两个不同模型的两个产品了。因为给定的输入不会再产生一个提前确定的输出。目前，我们尚不清楚如何基于非确定性模型来定义互用行为，这有可能导致此类模型是否应该作为互用实现的一部分被接受，以及如果可以接受又该如何接受的问题。
 </li>
 </ul>
 </div>
 <p>
-这些挑战带来的一个可能的后果，就是在越来越多的特性通过<a data-link-type="dfn|abstract-op" href="#dfn-generatedID-2" class="internalDFN" id="ref-for-dfn-generatedID-2-20">机器学习模型</a>来实现的同时，缩小能够真正实现互用和标准化的特性的范围（类似于<a hreflang="en" href="https://datatracker.ietf.org/doc/html/draft-tschofenig-post-standardization-02">假定Web应用不断增长的能力对标准化协议的需求的影响</a>）。在这种情况下，类似基于AI的编解码器这样的讨论在互用能力方面很可能会有很大不同。
+这些挑战带来的一个可能的后果，就是在越来越多的特性通过[=机器学习模型=]来实现的同时，缩小能够真正实现互用和标准化的特性的范围（类似于<a hreflang="en" href="https://datatracker.ietf.org/doc/html/draft-tschofenig-post-standardization-02">假定Web应用不断增长的能力对标准化协议的需求的影响</a>）。在这种情况下，类似基于AI的编解码器这样的讨论在互用能力方面很可能会有很大不同。
 </p>
 </section>
-
-
-<section id="references" class="appendix"><div class="header-wrapper"><h2 id="a"><bdi class="secno">A. </bdi>参考文献</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix A."></a></div><section id="generatedID"><div class="header-wrapper"><h3 id="a-1"><bdi class="secno">A.1 </bdi>非规范性引用</h3><a class="self-link" href="#generatedID" aria-label="Permalink for Appendix A.1"></a></div>
-    
-    <dl class="bibliography"><dt id="bib-c2pa-ai">[C2PA-AI]</dt><dd>
-      <a href="https://c2pa.org/specifications/specifications/1.3/ai-ml/ai_ml.html"><cite>Guidance for Artificial Intelligence and Machine Learning</cite></a>.  C2PA. URL: <a href="https://c2pa.org/specifications/specifications/1.3/ai-ml/ai_ml.html">https://c2pa.org/specifications/specifications/1.3/ai-ml/ai_ml.html</a>
-    </dd><dt id="bib-design-principles">[design-principles]</dt><dd>
-      <a href="https://www.w3.org/TR/design-principles/"><cite>Web Platform Design Principles</cite></a>. Sangwhan Moon; Lea Verou.  W3C. 30 January 2024. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/design-principles/">https://www.w3.org/TR/design-principles/</a>
-    </dd><dt id="bib-digital-credentials">[DIGITAL-CREDENTIALS]</dt><dd>
-      <a href="https://wicg.github.io/digital-identities/"><cite>Digital Credentials</cite></a>.  WICG. March 2024. URL: <a href="https://wicg.github.io/digital-identities/">https://wicg.github.io/digital-identities/</a>
-    </dd><dt id="bib-ethical-web-principles">[ethical-web-principles]</dt><dd>
-      <a href="https://www.w3.org/TR/ethical-web-principles/"><cite>W3C TAG Ethical Web Principles</cite></a>. Daniel Appelquist; Hadley Beeman; Amy Guy.  W3C. 7 November 2023. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/ethical-web-principles/">https://www.w3.org/TR/ethical-web-principles/</a>
-    </dd><dt id="bib-fedcm">[FEDCM]</dt><dd>
-      <a href="https://fedidcg.github.io/FedCM/"><cite>Federated Credential Management API</cite></a>.  W3C. Draft Community Group Report. URL: <a href="https://fedidcg.github.io/FedCM/">https://fedidcg.github.io/FedCM/</a>
-    </dd><dt id="bib-html">[HTML]</dt><dd>
-      <a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a>
-    </dd><dt id="bib-iptc-dst">[IPTC-DST]</dt><dd>
-      <a href="https://cv.iptc.org/newscodes/digitalsourcetype/"><cite>Digital Source Type vocabulary</cite></a>.  IPTC. URL: <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">https://cv.iptc.org/newscodes/digitalsourcetype/</a>
-    </dd><dt id="bib-iso/iec-22989">[ISO/IEC-22989]</dt><dd>
-      <a href="https://www.iso.org/standard/74296.html"><cite>Artificial intelligence concepts and terminology</cite></a>.  ISO/IEC. July 2022. Published. URL: <a href="https://www.iso.org/standard/74296.html">https://www.iso.org/standard/74296.html</a>
-    </dd><dt id="bib-model-cards">[MODEL-CARDS]</dt><dd>
-      <a href="https://arxiv.org/pdf/1810.03993.pdf"><cite>Model Cards for Model Reporting</cite></a>. M. Mitchell; S. Wu; A. Zaldivar; P. Barnes; L. Vasserman; B. Hutchinson; E. Spitzer; I. Deborah Raji; T. Gebru. 14 Juan 2019. URL: <a href="https://arxiv.org/pdf/1810.03993.pdf">https://arxiv.org/pdf/1810.03993.pdf</a>
-    </dd><dt id="bib-rfc9309">[RFC9309]</dt><dd>
-      <a href="https://www.rfc-editor.org/rfc/rfc9309"><cite>Robots Exclusion Protocol</cite></a>. M. Koster; G. Illyes; H. Zeller; L. Sassman.  IETF. September 2022. Proposed Standard. URL: <a href="https://www.rfc-editor.org/rfc/rfc9309">https://www.rfc-editor.org/rfc/rfc9309</a>
-    </dd><dt id="bib-schema-org">[schema-org]</dt><dd>
-      <a href="https://schema.org/"><cite>Schema.org</cite></a>. W3C Schema.org Community Group.  W3C. 6.0. URL: <a href="https://schema.org/">https://schema.org/</a>
-    </dd><dt id="bib-shape-detection-api">[SHAPE-DETECTION-API]</dt><dd>
-      <a href="https://wicg.github.io/shape-detection-api/"><cite>Accelerated Shape Detection in Images</cite></a>.  WICG. cg-draft. URL: <a href="https://wicg.github.io/shape-detection-api/">https://wicg.github.io/shape-detection-api/</a>
-    </dd><dt id="bib-speech-api">[SPEECH-API]</dt><dd>
-      <a href="https://wicg.github.io/speech-api/"><cite>Web Speech API</cite></a>.  WICG. cg-draft. URL: <a href="https://wicg.github.io/speech-api/">https://wicg.github.io/speech-api/</a>
-    </dd><dt id="bib-tdmrep">[TDMRep]</dt><dd>
-      <a href="https://www.w3.org/community/reports/tdmrep/CG-FINAL-tdmrep-20240202/"><cite>Final Community Group Report</cite></a>.  Text and Data Mining Reservation Protocol Community Group. February 2024. URL: <a href="https://www.w3.org/community/reports/tdmrep/CG-FINAL-tdmrep-20240202/">https://www.w3.org/community/reports/tdmrep/CG-FINAL-tdmrep-20240202/</a>
-    </dd><dt id="bib-unesco-ai">[UNESCO-AI]</dt><dd>
-      <a href="https://unesdoc.unesco.org/ark:/48223/pf0000380455"><cite>Recommendation on the Ethics of Artificial Intelligence</cite></a>.  UNESCO. 2021. URL: <a href="https://unesdoc.unesco.org/ark:/48223/pf0000380455">https://unesdoc.unesco.org/ark:/48223/pf0000380455</a>
-    </dd><dt id="bib-vc-data-model">[VC-DATA-MODEL]</dt><dd>
-      <a href="https://www.w3.org/TR/vc-data-model/"><cite>Verifiable Credentials Data Model v1.1</cite></a>. Manu Sporny; Grant Noble; Dave Longley; Daniel Burnett; Brent Zundel; Kyle Den Hartog.  W3C. 3 March 2022. W3C Recommendation. URL: <a href="https://www.w3.org/TR/vc-data-model/">https://www.w3.org/TR/vc-data-model/</a>
-    </dd><dt id="bib-w3c-ml-ws">[W3C-ML-WS]</dt><dd>
-      <a href="https://www.w3.org/2020/06/machine-learning-workshop/report.html"><cite>W3C Workshop Report on Web and Machine Learning</cite></a>.  W3C. October 2020. URL: <a href="https://www.w3.org/2020/06/machine-learning-workshop/report.html">https://www.w3.org/2020/06/machine-learning-workshop/report.html</a>
-    </dd><dt id="bib-w3c-vision">[w3c-vision]</dt><dd>
-      <a href="https://www.w3.org/TR/w3c-vision/"><cite>Vision for W3C</cite></a>. Chris Wilson.  W3C. 26 October 2023. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/w3c-vision/">https://www.w3.org/TR/w3c-vision/</a>
-    </dd><dt id="bib-wai-ai">[WAI-AI]</dt><dd>
-      <a href="https://www.w3.org/WAI/research/ai2023/"><cite>Artificial Intelligence (AI) and Accessibility Research Symposium 2023</cite></a>.  W3C Web Accessibility Initiative. Jan 2023. URL: <a href="https://www.w3.org/WAI/research/ai2023/">https://www.w3.org/WAI/research/ai2023/</a>
-    </dd><dt id="bib-wasm-core-2">[WASM-CORE-2]</dt><dd>
-      <a href="https://www.w3.org/TR/wasm-core-2/"><cite>WebAssembly Core Specification</cite></a>. Andreas Rossberg.  W3C. 19 April 2022. W3C Working Draft. URL: <a href="https://www.w3.org/TR/wasm-core-2/">https://www.w3.org/TR/wasm-core-2/</a>
-    </dd><dt id="bib-webgpu">[WEBGPU]</dt><dd>
-      <a href="https://www.w3.org/TR/webgpu/"><cite>WebGPU</cite></a>. Kai Ninomiya; Brandon Jones; Jim Blandy.  W3C. 5 February 2024. W3C Working Draft. URL: <a href="https://www.w3.org/TR/webgpu/">https://www.w3.org/TR/webgpu/</a>
-    </dd><dt id="bib-webmachinelearning-ethics">[webmachinelearning-ethics]</dt><dd>
-      <a href="https://www.w3.org/TR/webmachinelearning-ethics/"><cite>Ethical Principles for Web Machine Learning</cite></a>. Anssi Kostiainen.  W3C. 8 January 2024. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/webmachinelearning-ethics/">https://www.w3.org/TR/webmachinelearning-ethics/</a>
-    </dd><dt id="bib-webnn">[WEBNN]</dt><dd>
-      <a href="https://www.w3.org/TR/webnn/"><cite>Web Neural Network API</cite></a>. Ningxin Hu; Chai Chaoweeraprasit.  W3C. 7 February 2024. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/webnn/">https://www.w3.org/TR/webnn/</a>
-    </dd></dl>
-  </section></section><p role="navigation" id="back-to-top">
-    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
-  </p><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-generatedID" aria-label="Links in this document to definition: 人工智能">
-      <span class="caret"></span>
-      <div>
-        <a class="self-link" href="#dfn-generatedID" aria-label="Permalink for definition: 人工智能. Activate to close this dialog.">Permalink</a>
-         
-      </div>
-      <p><b>Referenced in:</b></p>
-      <ul>
-    <li>
-      <a href="#ref-for-dfn-generatedID-1" title="§ 2. 简介">§ 2. 简介</a> 
-    </li>
-  </ul>
-    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-generatedID-0" aria-label="Links in this document to definition: AI系统">
-      <span class="caret"></span>
-      <div>
-        <a class="self-link" href="#dfn-generatedID-0" aria-label="Permalink for definition: AI系统. Activate to close this dialog.">Permalink</a>
-         
-      </div>
-      <p><b>Referenced in:</b></p>
-      <ul>
-    <li>
-      <a href="#ref-for-dfn-generatedID-0-1" title="§ 摘要">§ 摘要</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-0-2" title="§ 关于本文档">§ 关于本文档</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-0-3" title="§ 1. 概述">§ 1. 概述</a> <a href="#ref-for-dfn-generatedID-0-4" title="Reference 2">(2)</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-0-5" title="§ 2.1 术语">§ 2.1 术语</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-0-6" title="§ 3. AI系统与Web的交叉领域">§ 3. AI系统与Web的交叉领域</a> <a href="#ref-for-dfn-generatedID-0-7" title="Reference 2">(2)</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-0-8" title="§ 4.1.1 关于AI生成内容的透明度">§ 4.1.1 关于AI生成内容的透明度</a> <a href="#ref-for-dfn-generatedID-0-9" title="Reference 2">(2)</a> <a href="#ref-for-dfn-generatedID-0-10" title="Reference 3">(3)</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-0-11" title="§ 4.1.2 AI介入服务的透明度">§ 4.1.2 AI介入服务的透明度</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-0-12" title="§ 4.4 可持续性">§ 4.4 可持续性</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-0-13" title="§ 4.5 平衡内容创作者激励与消费者权益">§ 4.5 平衡内容创作者激励与消费者权益</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-0-14" title="§ 4.5.1 与搜索引擎的比较">§ 4.5.1 与搜索引擎的比较</a> <a href="#ref-for-dfn-generatedID-0-15" title="Reference 2">(2)</a> <a href="#ref-for-dfn-generatedID-0-16" title="Reference 3">(3)</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-0-17" title="§ 5. AI系统对互用性的影响">§ 5. AI系统对互用性的影响</a> 
-    </li>
-  </ul>
-    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-generatedID-1" aria-label="Links in this document to definition: 机器学习">
-      <span class="caret"></span>
-      <div>
-        <a class="self-link" href="#dfn-generatedID-1" aria-label="Permalink for definition: 机器学习. Activate to close this dialog.">Permalink</a>
-         
-      </div>
-      <p><b>Referenced in:</b></p>
-      <ul>
-    <li>
-      <a href="#ref-for-dfn-generatedID-1-1" title="§ 2.1 术语">§ 2.1 术语</a> 
-    </li>
-  </ul>
-    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-generatedID-2" aria-label="Links in this document to definition: 机器学习模型">
-      <span class="caret"></span>
-      <div>
-        <a class="self-link" href="#dfn-generatedID-2" aria-label="Permalink for definition: 机器学习模型. Activate to close this dialog.">Permalink</a>
-         
-      </div>
-      <p><b>Referenced in:</b></p>
-      <ul>
-    <li>
-      <a href="#ref-for-dfn-generatedID-2-1" title="§ 摘要">§ 摘要</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-2-2" title="§ 关于本文档">§ 关于本文档</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-2-3" title="§ 1. 概述">§ 1. 概述</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-2-4" title="§ 2. 简介">§ 2. 简介</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-2-5" title="§ 2.1 术语">§ 2.1 术语</a> <a href="#ref-for-dfn-generatedID-2-6" title="Reference 2">(2)</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-2-7" title="§ 3. AI系统与Web的交叉领域">§ 3. AI系统与Web的交叉领域</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-2-8" title="§ 4.1.2 AI介入服务的透明度">§ 4.1.2 AI介入服务的透明度</a> <a href="#ref-for-dfn-generatedID-2-9" title="Reference 2">(2)</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-2-10" title="§ 4.3 安全与安保">§ 4.3 安全与安保</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-2-11" title="§ 4.4 可持续性">§ 4.4 可持续性</a> <a href="#ref-for-dfn-generatedID-2-12" title="Reference 2">(2)</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-2-13" title="§ 4.5 平衡内容创作者激励与消费者权益">§ 4.5 平衡内容创作者激励与消费者权益</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-2-14" title="§ 4.5.1 与搜索引擎的比较">§ 4.5.1 与搜索引擎的比较</a> <a href="#ref-for-dfn-generatedID-2-15" title="Reference 2">(2)</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-2-16" title="§ 5. AI系统对互用性的影响">§ 5. AI系统对互用性的影响</a> <a href="#ref-for-dfn-generatedID-2-17" title="Reference 2">(2)</a> <a href="#ref-for-dfn-generatedID-2-18" title="Reference 3">(3)</a> <a href="#ref-for-dfn-generatedID-2-19" title="Reference 4">(4)</a> <a href="#ref-for-dfn-generatedID-2-20" title="Reference 5">(5)</a> 
-    </li>
-  </ul>
-    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-generatedID-3" aria-label="Links in this document to definition: 训练">
-      <span class="caret"></span>
-      <div>
-        <a class="self-link" href="#dfn-generatedID-3" aria-label="Permalink for definition: 训练. Activate to close this dialog.">Permalink</a>
-         
-      </div>
-      <p><b>Referenced in:</b></p>
-      <ul>
-    <li>
-      <a href="#ref-for-dfn-generatedID-3-1" title="§ 1. 概述">§ 1. 概述</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-3-2" title="§ 4.1.1 关于AI生成内容的透明度">§ 4.1.1 关于AI生成内容的透明度</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-3-3" title="§ 4.1.2 AI介入服务的透明度">§ 4.1.2 AI介入服务的透明度</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-3-4" title="§ 4.2 隐私权和数据保护">§ 4.2 隐私权和数据保护</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-3-5" title="§ 4.4 可持续性">§ 4.4 可持续性</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-3-6" title="§ 4.5.1 与搜索引擎的比较">§ 4.5.1 与搜索引擎的比较</a> 
-    </li>
-  </ul>
-    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-generatedID-4" aria-label="Links in this document to definition: 推理">
-      <span class="caret"></span>
-      <div>
-        <a class="self-link" href="#dfn-generatedID-4" aria-label="Permalink for definition: 推理. Activate to close this dialog.">Permalink</a>
-         
-      </div>
-      <p><b>Referenced in:</b></p>
-      <ul>
-    <li>
-      <a href="#ref-for-dfn-generatedID-4-1" title="§ 3. AI系统与Web的交叉领域">§ 3. AI系统与Web的交叉领域</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-4-2" title="§ 4.2 隐私权和数据保护">§ 4.2 隐私权和数据保护</a> <a href="#ref-for-dfn-generatedID-4-3" title="Reference 2">(2)</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-4-4" title="§ 4.4 可持续性">§ 4.4 可持续性</a> 
-    </li><li>
-      <a href="#ref-for-dfn-generatedID-4-5" title="§ 4.5.1 与搜索引擎的比较">§ 4.5.1 与搜索引擎的比较</a> 
-    </li>
-  </ul>
-    </div><script id="respec-dfn-panel">(() => {
-// @ts-check
-if (document.respec) {
-  document.respec.ready.then(setupPanel);
-} else {
-  setupPanel();
-}
-
-function setupPanel() {
-  const listener = panelListener();
-  document.body.addEventListener("keydown", listener);
-  document.body.addEventListener("click", listener);
-}
-
-function panelListener() {
-  /** @type {HTMLElement} */
-  let panel = null;
-  return event => {
-    const { target, type } = event;
-
-    if (!(target instanceof HTMLElement)) return;
-
-    // For keys, we only care about Enter key to activate the panel
-    // otherwise it's activated via a click.
-    if (type === "keydown" && event.key !== "Enter") return;
-
-    const action = deriveAction(event);
-
-    switch (action) {
-      case "show": {
-        hidePanel(panel);
-        /** @type {HTMLElement} */
-        const dfn = target.closest("dfn, .index-term");
-        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
-        const coords = deriveCoordinates(event);
-        displayPanel(dfn, panel, coords);
-        break;
-      }
-      case "dock": {
-        panel.style.left = null;
-        panel.style.top = null;
-        panel.classList.add("docked");
-        break;
-      }
-      case "hide": {
-        hidePanel(panel);
-        panel = null;
-        break;
-      }
-    }
-  };
-}
-
-/**
- * @param {MouseEvent|KeyboardEvent} event
- */
-function deriveCoordinates(event) {
-  const target = /** @type HTMLElement */ (event.target);
-
-  // We prevent synthetic AT clicks from putting
-  // the dialog in a weird place. The AT events sometimes
-  // lack coordinates, so they have clientX/Y = 0
-  const rect = target.getBoundingClientRect();
-  if (
-    event instanceof MouseEvent &&
-    event.clientX >= rect.left &&
-    event.clientY >= rect.top
-  ) {
-    // The event probably happened inside the bounding rect...
-    return { x: event.clientX, y: event.clientY };
-  }
-
-  // Offset to the middle of the element
-  const x = rect.x + rect.width / 2;
-  // Placed at the bottom of the element
-  const y = rect.y + rect.height;
-  return { x, y };
-}
-
-/**
- * @param {Event} event
- */
-function deriveAction(event) {
-  const target = /** @type {HTMLElement} */ (event.target);
-  const hitALink = !!target.closest("a");
-  if (target.closest("dfn:not([data-cite]), .index-term")) {
-    return hitALink ? "none" : "show";
-  }
-  if (target.closest(".dfn-panel")) {
-    if (hitALink) {
-      return target.classList.contains("self-link") ? "hide" : "dock";
-    }
-    const panel = target.closest(".dfn-panel");
-    return panel.classList.contains("docked") ? "hide" : "none";
-  }
-  if (document.querySelector(".dfn-panel:not([hidden])")) {
-    return "hide";
-  }
-  return "none";
-}
-
-/**
- * @param {HTMLElement} dfn
- * @param {HTMLElement} panel
- * @param {{ x: number, y: number }} clickPosition
- */
-function displayPanel(dfn, panel, { x, y }) {
-  panel.hidden = false;
-  // distance (px) between edge of panel and the pointing triangle (caret)
-  const MARGIN = 20;
-
-  const dfnRects = dfn.getClientRects();
-  // Find the `top` offset when the `dfn` can be spread across multiple lines
-  let closestTop = 0;
-  let minDiff = Infinity;
-  for (const rect of dfnRects) {
-    const { top, bottom } = rect;
-    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
-    if (diffFromClickY < minDiff) {
-      minDiff = diffFromClickY;
-      closestTop = top;
-    }
-  }
-
-  const top = window.scrollY + closestTop + dfnRects[0].height;
-  const left = x - MARGIN;
-  panel.style.left = `${left}px`;
-  panel.style.top = `${top}px`;
-
-  // Find if the panel is flowing out of the window
-  const panelRect = panel.getBoundingClientRect();
-  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
-  if (panelRect.right > SCREEN_WIDTH) {
-    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
-    const newCaretOffset = left - newLeft;
-    panel.style.left = `${newLeft}px`;
-    /** @type {HTMLElement} */
-    const caret = panel.querySelector(".caret");
-    caret.style.left = `${newCaretOffset}px`;
-  }
-
-  // As it's a dialog, we trap focus.
-  // TODO: when <dialog> becomes a implemented, we should really
-  // use that.
-  trapFocus(panel, dfn);
-}
-
-/**
- * @param {HTMLElement} panel
- * @param {HTMLElement} dfn
- * @returns
- */
-function trapFocus(panel, dfn) {
-  /** @type NodeListOf<HTMLAnchorElement> elements */
-  const anchors = panel.querySelectorAll("a[href]");
-  // No need to trap focus
-  if (!anchors.length) return;
-
-  // Move focus to first anchor element
-  const first = anchors.item(0);
-  first.focus();
-
-  const trapListener = createTrapListener(anchors, panel, dfn);
-  panel.addEventListener("keydown", trapListener);
-
-  // Hiding the panel releases the trap
-  const mo = new MutationObserver(records => {
-    const [record] = records;
-    const target = /** @type HTMLElement */ (record.target);
-    if (target.hidden) {
-      panel.removeEventListener("keydown", trapListener);
-      mo.disconnect();
-    }
-  });
-  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
-}
-
-/**
- *
- * @param {NodeListOf<HTMLAnchorElement>} anchors
- * @param {HTMLElement} panel
- * @param {HTMLElement} dfn
- * @returns
- */
-function createTrapListener(anchors, panel, dfn) {
-  const lastIndex = anchors.length - 1;
-  let currentIndex = 0;
-  return event => {
-    switch (event.key) {
-      // Hitting "Tab" traps us in a nice loop around elements.
-      case "Tab": {
-        event.preventDefault();
-        currentIndex += event.shiftKey ? -1 : +1;
-        if (currentIndex < 0) {
-          currentIndex = lastIndex;
-        } else if (currentIndex > lastIndex) {
-          currentIndex = 0;
-        }
-        anchors.item(currentIndex).focus();
-        break;
-      }
-
-      // Hitting "Enter" on an anchor releases the trap.
-      case "Enter":
-        hidePanel(panel);
-        break;
-
-      // Hitting "Escape" returns focus to dfn.
-      case "Escape":
-        hidePanel(panel);
-        dfn.focus();
-        return;
-    }
-  };
-}
-
-/** @param {HTMLElement} panel */
-function hidePanel(panel) {
-  if (!panel) return;
-  panel.hidden = true;
-  panel.classList.remove("docked");
-}
-})()</script><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
+</body>
+</html>
