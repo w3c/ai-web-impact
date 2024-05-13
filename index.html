@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en-us"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 34.5.0">
+<meta name="generator" content="ReSpec 35.0.2">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 dfn{cursor:pointer}
@@ -26,6 +26,8 @@ dfn{cursor:pointer}
 <title>AI &amp; the Web: Understanding and managing the impact of Machine Learning models on the Web</title>
   
   
+<meta name="color-scheme" content="light dark">
+  
 <style>
 
     a[href].internalDFN {
@@ -35,7 +37,6 @@ dfn{cursor:pointer}
 </style>
   
 <script>var respecConfig = {
-    darkMode: true,
     status: "UD",
     editors: [ {name: "Dominique Hazael-Massieux", email: "dom@w3.org"}],
     latestVersion: "https://www.w3.org/reports/ai-web-impact/",
@@ -129,8 +130,6 @@ dfn{cursor:pointer}
 25%{transform:scale(1.25,1.25);opacity:.75}
 100%{transform:scale(1,1)}
 }
-:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
-dfn{font-weight:700}
 a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
 a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
 a.bibref{text-decoration:none}
@@ -144,19 +143,8 @@ a.bibref{text-decoration:none}
 cite .bibref{font-style:normal}
 a[href].orcid{padding-left:4px;padding-right:4px}
 a[href].orcid>svg{margin-bottom:-2px}
-.toc a,.tof a{text-decoration:none}
 ol.tof,ul.tof{list-style:none outside none}
 .caption{margin-top:.5em;font-style:italic}
-table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
-.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
-.simple th a{color:#fff;padding:3px 5px;text-align:left}
-.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
-.simple td{padding:3px 10px;border-top:1px solid #ddd}
-.simple tr:nth-child(even){background:#f0f6ff}
-.section dd>p:first-child{margin-top:0}
-.section dd>p:last-child{margin-bottom:0}
-.section dd{margin-bottom:1em}
-.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
 #issue-summary>ul{column-count:2}
 #issue-summary li{list-style:none;display:inline-block}
 details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
@@ -181,13 +169,6 @@ dd{margin-left:0}
 }
 </style>
 
-<style>
-
-        :root {
-          color-scheme: light dark;
-        }
-      
-</style>
 <meta name="description" content="This document proposes an analysis of the systemic impact of AI systems, and in particular ones based on Machine Learning models, on the Web, and the role that Web standardization may play in managing that impact.">
 <style>
 var{position:relative;cursor:pointer}
@@ -197,7 +178,6 @@ var[data-type]::after{content:attr(data-type);transform:translateX(-50%) transla
 var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 </style>
 <script id="initialUserConfig" type="application/json">{
-  "darkMode": true,
   "status": "UD",
   "editors": [
     {
@@ -304,8 +284,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "postProcess": [
     null
   ],
-  "publishISODate": "2024-04-03T00:00:00.000Z",
-  "generatedSubtitle": "03 April 2024"
+  "publishISODate": "2024-05-13T00:00:00.000Z",
+  "generatedSubtitle": "13 May 2024"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/base.css">
 <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="https://www.w3.org/StyleSheets/TR/2021/dark.css"></head>
@@ -313,7 +293,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <body class="h-entry informative"><div class="head">
     
     <h1 id="title" class="title">AI &amp; the Web: Understanding and managing the impact of Machine Learning models on the Web</h1> 
-    <p id="w3c-state"> <time class="dt-published" datetime="2024-04-03">03 April 2024</time></p>
+    <p id="w3c-state"> <time class="dt-published" datetime="2024-05-13">13 May 2024</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -735,17 +715,17 @@ A possible consequence of these challenges is a reduction of the scope of what c
     </dd><dt id="bib-w3c-ml-ws">[W3C-ML-WS]</dt><dd>
       <a href="https://www.w3.org/2020/06/machine-learning-workshop/report.html"><cite>W3C Workshop Report on Web and Machine Learning</cite></a>.  W3C. October 2020. URL: <a href="https://www.w3.org/2020/06/machine-learning-workshop/report.html">https://www.w3.org/2020/06/machine-learning-workshop/report.html</a>
     </dd><dt id="bib-w3c-vision">[w3c-vision]</dt><dd>
-      <a href="https://www.w3.org/TR/w3c-vision/"><cite>Vision for W3C</cite></a>. Chris Wilson.  W3C. 26 October 2023. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/w3c-vision/">https://www.w3.org/TR/w3c-vision/</a>
+      <a href="https://www.w3.org/TR/w3c-vision/"><cite>Vision for W3C</cite></a>. Chris Wilson.  W3C. 3 April 2024. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/w3c-vision/">https://www.w3.org/TR/w3c-vision/</a>
     </dd><dt id="bib-wai-ai">[WAI-AI]</dt><dd>
       <a href="https://www.w3.org/WAI/research/ai2023/"><cite>Artificial Intelligence (AI) and Accessibility Research Symposium 2023</cite></a>.  W3C Web Accessibility Initiative. Jan 2023. URL: <a href="https://www.w3.org/WAI/research/ai2023/">https://www.w3.org/WAI/research/ai2023/</a>
     </dd><dt id="bib-wasm-core-2">[WASM-CORE-2]</dt><dd>
-      <a href="https://www.w3.org/TR/wasm-core-2/"><cite>WebAssembly Core Specification</cite></a>. Andreas Rossberg.  W3C. 5 March 2024. W3C Working Draft. URL: <a href="https://www.w3.org/TR/wasm-core-2/">https://www.w3.org/TR/wasm-core-2/</a>
+      <a href="https://www.w3.org/TR/wasm-core-2/"><cite>WebAssembly Core Specification</cite></a>. Andreas Rossberg.  W3C. 28 April 2024. W3C Working Draft. URL: <a href="https://www.w3.org/TR/wasm-core-2/">https://www.w3.org/TR/wasm-core-2/</a>
     </dd><dt id="bib-webgpu">[WEBGPU]</dt><dd>
-      <a href="https://www.w3.org/TR/webgpu/"><cite>WebGPU</cite></a>. Kai Ninomiya; Brandon Jones; Jim Blandy.  W3C. 23 March 2024. W3C Working Draft. URL: <a href="https://www.w3.org/TR/webgpu/">https://www.w3.org/TR/webgpu/</a>
+      <a href="https://www.w3.org/TR/webgpu/"><cite>WebGPU</cite></a>. Kai Ninomiya; Brandon Jones; Jim Blandy.  W3C. 8 May 2024. W3C Working Draft. URL: <a href="https://www.w3.org/TR/webgpu/">https://www.w3.org/TR/webgpu/</a>
     </dd><dt id="bib-webmachinelearning-ethics">[webmachinelearning-ethics]</dt><dd>
       <a href="https://www.w3.org/TR/webmachinelearning-ethics/"><cite>Ethical Principles for Web Machine Learning</cite></a>. Anssi Kostiainen.  W3C. 8 January 2024. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/webmachinelearning-ethics/">https://www.w3.org/TR/webmachinelearning-ethics/</a>
     </dd><dt id="bib-webnn">[WEBNN]</dt><dd>
-      <a href="https://www.w3.org/TR/webnn/"><cite>Web Neural Network API</cite></a>. Ningxin Hu; Dwayne Robinson.  W3C. 25 March 2024. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/webnn/">https://www.w3.org/TR/webnn/</a>
+      <a href="https://www.w3.org/TR/webnn/"><cite>Web Neural Network API</cite></a>. Ningxin Hu; Dwayne Robinson.  W3C. 11 May 2024. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/webnn/">https://www.w3.org/TR/webnn/</a>
     </dd></dl>
   </section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
