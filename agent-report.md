@@ -92,7 +92,7 @@ As discussed above, AI Agents can be used to replace what end users would typica
 
 This points towards a convergence that is actively being explored across several projects and organizations: AI Agents as complements or replacements to browsers as primary web user agents.
 
-From an end user perspective, the primary value of AI Agents is likely to reside in their ability to remove or reduce friction, i.e. to automate tasks users are currently required to perform but do perceive to benefit from.
+From an end user perspective, the primary value of AI Agents is likely to reside in their ability to remove or reduce friction, i.e. to automate tasks users are currently required to perform but do not perceive to benefit from.
 
 Browsers as they currently exist already compete on providing some of that support in their user interface: authentication managers, smart autocomplete, payment, malware protection are all illustration of automation or semi-automation that have been deployed to make users life easier.
 
