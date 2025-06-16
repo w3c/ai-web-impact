@@ -144,9 +144,9 @@ Coding AI Agents can provide increased visibility and support in almost any of t
 * AI Agents could presumably help identify libraries and frameworks that help adopt a given feature, although their ability to do that at scale and without hallucinations remains uncertain,  
 * Likewise, AI Agents can provide specific guidance to integrate a given feature within an existing workflow or system based on the patterns it might have identified in its training set.
 
-To fully realize these opportunities, it is critical to ensure that these AI Agents have access to **accurate** and **uptodate** information about the said features, libraries and systems.
+To fully realize these opportunities, it is critical to ensure that these AI Agents have access to **accurate** and **up-to-date** information about the said features, libraries and systems.
 
-Because that information tends to be fast evolving, relying on uptodate material being incorporated in the training phase of the underlying models is unlikely to yield satisfactory results. It is much more likely that providing well-identified sources of quality information for Web technologies that agents could integrate using e.g. MCP would ensure a much better outcome.
+Because that information tends to be fast evolving, relying on up-to-date material being incorporated in the training phase of the underlying models is unlikely to yield satisfactory results. It is much more likely that providing well-identified sources of quality information for Web technologies that agents could integrate using e.g. MCP would ensure a much better outcome.
 
 Some of these sources have already well-defined entry points: the [webref](https://github.com/w3c/webref/) project provides a comprehensive repository of machine-readable data on browser technologies, the [web features project](https://github.com/web-platform-dx/web-features/) catalogs a description of all browser features which the [browser-compat-data](https://github.com/mdn/browser-compat-data/) allows to associate with actual shipping implementations; the [MDN documentation project](https://github.com/mdn/content/) curates technical reference documentation and training materials on these features, with a specific focus on accuracy, and integrating qualitative considerations about their usage (e.g. to ensure their accessible use).
 
