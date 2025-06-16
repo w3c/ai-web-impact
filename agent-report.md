@@ -32,7 +32,7 @@ AI Agents are likely to have an impact on both monetization and analytics, but t
 * Targeted consumption (e.g,. watching a movie, listening to music),  
 * Information gathering (e.g., picking a vacation destination). 
 
-For the latter user experiences, so-called "deep research"  AI agents have already appeared on the scene. They aim to replace some types of search and browsing across the Web, and have the effect of limiting or even eliminating the user’s interactions with a multiplicity of sites. By doing so, AI Agents directly impact monetization opportunities for those sites, which may jeopardize their livelihood. Early signals of reduced visits from search engines suggest this is already occurring. Unless alternatives are established to mitigate this impact, a significant portion of content producers may no longer be able to distribute their content openly, reducing the overall value of the Web both for end users and AI Agents.
+For the latter user experiences, so-called "deep research" AI agents have already appeared on the scene. Some operate on traditional search sites, but others move search capabilities directly into the browser and may replace some types of traditional search engine web sites. In doing so, these AI Agents directly impact monetization opportunities for those sites, which may jeopardize their livelihood. Early signals of reduced visits from search engines suggest this is already occurring. Unless alternatives are established to mitigate this impact, a significant portion of content producers may no longer be able to distribute their content openly, reducing the overall value of the Web both for end users and AI Agents.
 
 Such alternatives likely include:
 
