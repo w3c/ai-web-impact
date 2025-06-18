@@ -139,7 +139,6 @@ Coding AI Agents already and will soon be able to:
 As with any other domain, the utility and quality of AI tools for coding with Web technology depends on **accurate**, **up-to-date** information. Because the Web is large, and constantly evolving without centralized control, relying on rapidly outdated materials incorporated at model training time may not yield good results. Instead, integrating curated information (e.g., using Model Context Protocol (MCP)) would ensure better outcomes.
 
 Today's curated resources include:
-Today's curated resources include:
 * the [webref](https://github.com/w3c/webref/) project, a comprehensive repository of machine-readable data on browser technologies
 * the [web features project](https://github.com/web-platform-dx/web-features/), catalog of descriptions of all browser features which the [browser-compat-data](https://github.com/mdn/browser-compat-data/) allows to associate with actual shipping implementations
 * the [MDN documentation project](https://github.com/mdn/content/), curated technical reference documentation and training materials on these features, with a specific focus on accuracy, and integrating qualitative considerations about their usage (e.g., to support accessibility)
