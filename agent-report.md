@@ -6,19 +6,19 @@ This document proposes an analysis of the potential impact of the deployment of 
 
 # Status of this document
 
-This document has no standing and in active development to support structured conversations on the topic within the W3C community, possibly leading to a dedicated W3C Workshop.
+This document has no standing and is in active development to support structured conversations on the topic within the W3C community, possibly leading to a dedicated W3C Workshop.
 
 # Terminology
 
-The taxonomy of what constitutes an AI Agent is still in active flux; for the purpose of this document, we define an AI Agent as a piece of software making use of AI technologies (typically LLMs and other Machine Learning models) to interact autonomously or semi-autonomously with disparate content and services to accomplish complex tasks. These agents can act directly on behalf of an end user, or prompted by other agents or external circumstances.
+The taxonomy of what constitutes an AI Agent is still in active flux; for the purpose of this document, we define an AI Agent as a piece of software making use of AI technologies (typically LLMs and other Machine Learning models) to interact autonomously or semi-autonomously with disparate content and services to accomplish complex tasks. These agents can act directly on behalf of an end user, or when prompted by other agents or external circumstances.
 
 # Scope
 
-This document complements the existing [AI & the Web: Understanding and managing the impact of Machine Learning models on the Web](https://www.w3.org/reports/ai-web-impact/) report which looks at the impact on the Web of AI systems and Machine Learning models more generally. That report covers a number of systemic impacts of these systems while the current document focuses specifically on what AI Agents change to that picture. In particular, this document does not integrate considerations associated with how the Web is impacted by ML models training since AI Agents are built downstream from such an activity which is covered in the broader report.
+This document complements the existing [AI & the Web: Understanding and managing the impact of Machine Learning models on the Web](https://www.w3.org/reports/ai-web-impact/) report which looks at the impact on the Web of AI systems and Machine Learning models more generally. That report covers a number of systemic impacts of these systems while the current document focuses specifically on what AI Agents change to that picture. In particular, this document does not include considerations associated with how the Web is impacted by ML model training since AI Agents are built downstream from such an activity which is covered in the broader report.
 
 # AI Agents Interacting with the Web
 
-The Web is arguably the primary platform to expose digital content and services and constitutes thus an unavoidable source and target for AI Agents.  
+The Web is arguably the primary platform to expose digital content and services and thus constitutes an unavoidable source and target for AI Agents.  
 We posit that the impact of AI Agents will differ vastly depending on the nature of Web end points: in particular, we describe below how the impact may differ for *content* compared to *online services*.
 
 ## Impact on Web Content
@@ -29,7 +29,7 @@ Many Web sites rely on users directly perceiving content for monetization (e.g. 
 
 AI Agents are likely to have an impact on both monetization and analytics, but the impact is likely to vary based on two main usage scenarios:
 
-* Targeted consumption (e.g,. watching a movie, listening to music),  
+* Targeted consumption (e.g., watching a movie, listening to music),  
 * Information gathering (e.g., picking a vacation destination). 
 
 For the latter user experiences, so-called "deep research" AI agents have already appeared on the scene. Some operate on traditional search sites, but others move search capabilities directly into the browser and may replace some types of traditional search engine web sites. In doing so, these AI Agents directly impact monetization opportunities for those sites, which may jeopardize their livelihood. Early signals of reduced visits from search engines suggest this is already occurring. Unless alternatives are established to mitigate this impact, a significant portion of content producers may no longer be able to distribute their content openly, reducing the overall value of the Web both for end users and AI Agents.
@@ -50,7 +50,7 @@ Similar situations have arisen at different points of the Web history: the devel
 Risks:
 
 * Depletion of openly distributed Web content  
-* New intermediation between content producers and their users create disconnect in feedback loop  
+* New intermediation between content producers and their users creates a disconnect in the feedback loop  
 * Two-tier Web experiences for users with or without agents
 
 Opportunities:
@@ -67,7 +67,7 @@ This would offer multiple potential benefits:
 * enriched services (for example, by simplifying otherwise overly complex tasks, and thus engaging users is new ways)  
 * increased productivity (if users need to spend less time to achieve a given complex task)
 
-In many cases, AI Agents will reduce friction by carrying out actions autonomously on behalf of the user. Building this future will involve some critical standardized bricks.
+In many cases, AI Agents will reduce friction by carrying out actions autonomously on behalf of the user. Building this future will involve some critical standardized building blocks.
 
 An emerging architecture for optimizing services delivery to AI Agents is via dedicated formats and protocols: either where these services are considered as traditional non-AI end points ("tools" as it would be described e.g. in MCP), or where these services themselves are exposed as AI Agents. There are a lot of active developments in establishing such protocols, most of them currently happen outside of traditional standards organizations.
 
@@ -90,7 +90,7 @@ Opportunities:
 
 As discussed above, AI Agents can be used to replace what end users would typically have used their browsers for when researching and gathering information online.
 
-This points towards a convergence that is actively being explored across several projects and organizations: AI Agents as complements or replacements to browsers as primary web user agents.
+This points towards a convergence that is actively being explored across several projects and organizations: AI Agents as complements or replacements for browsers as primary web user agents.
 
 From an end user perspective, the primary value of AI Agents is likely to reside in their ability to remove or reduce friction, i.e. to automate tasks users are currently required to perform but do not perceive to benefit from.
 
@@ -100,11 +100,11 @@ AI Agents bring a number of potential significant additional improvements given 
 
 To take full advantage of these benefits, the following structural issues need to be addressed:
 
-* LLM-based systems suffer from so-called "hallucinations" that may lead AI Agents to take nonsensical or harmful actions; depending on the sensitivity activity they would be automating, these hallucinations could create significant harm to the end users they're supposed to represent, with significant detrimental impact on the trust end users would have in agents, but also possibly in online systems in general.  
+* LLM-based systems suffer from so-called "hallucinations" that may lead AI Agents to take nonsensical or harmful actions; depending on the sensitivity of the activity they would be automating, these hallucinations could create significant harm to the end users they're supposed to represent, with significant detrimental impact on the trust end users would have in agents, but also possibly in online systems in general.  
 * A critical architectural design of Web browsers to protect their end users is the sharp separation between browser-controlled UI (the so-called "chrome") and the interface created and managed by Web content. The inability to establish as robust a separation in LLM-based systems has already allowed prompt-injection attacks in many contexts; in an environment as open as the Web in a context as sensitive as the one controlled by browsers, the impact of these attacks would be potentially manyfold worse (see also [AI in the Browser Threat Modelling](https://github.com/w3c-cg/threat-modeling/blob/simoneonofri-patch-2/models/ai-in-browser.md)).  
-* Over time, web browsers have adopted (more or less robustly) a series of duties they are expected to follow, as the W3C Technical Architecture Group is in the [process of documenting](https://w3ctag.github.io/user-agents/). Beyond any moral or legal considerations, these duties have played a critical role in enabling a flourishing ecosystem for both end users and content providers. The extent to which these duties can be applied in the less controlled environment induced by LLM-powered systems remains to be determined; for instance, browsers take great pain in avoiding to expose what sites a user has already visited \- are there risks that an AI-based system would risk surfacing not only browsing history but maybe even prompt history?  
+* Over time, web browsers have adopted (more or less robustly) a series of duties they are expected to follow, as the W3C Technical Architecture Group is in the [process of documenting](https://w3ctag.github.io/user-agents/). Beyond any moral or legal considerations, these duties have played a critical role in enabling a flourishing ecosystem for both end users and content providers. The extent to which these duties can be applied in the less controlled environment induced by LLM-powered systems remains to be determined; for instance, browsers take great pain to avoid exposing what sites a user has already visited \- are there risks that an AI-based system would risk surfacing not only browsing history but maybe even prompt history?  
 
-Generally speaking, the current user experience of web browsers provide a relatively clear liability story, where the end user, the browser and the content can be assigned blame when something goes wrong. In a world where an AI agent takes more of the end user tasks and operates through a less deterministic model than a web browser, possibly to interact with content itself managed by an AI agent with its own limitations, the risk of exposing users to an unreliable and untrustworthy platform is significant.
+Generally speaking, the current user experience of web browsers provides a relatively clear liability story, where the end user, the browser and the content can be assigned blame when something goes wrong. In a world where an AI agent takes more of the end user tasks and operates through a less deterministic model than a web browser, possibly to interact with content itself managed by an AI agent with its own limitations, the risk of exposing users to an unreliable and untrustworthy platform is significant.
 
 Another assumption that these AI web user agents have already started breaking is the relatively clean delineation between end-user operated agents and crawlers. When crawlers emerged in the early days of the Web, the impact of their automated web page access on web servers led to the creation of the robots.txt proposal indicating which pages to crawl and limiting the frequency of access. In practice, there were only so many crawlers deployed at web scale that this proved sufficient in keeping the induced load on servers manageable.
 
