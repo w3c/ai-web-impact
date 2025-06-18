@@ -118,7 +118,7 @@ Opportunities:
 
 # AI Agents and the Developer Experience
 
-One domain where AI Agents seem to be gaining rapid adoption is in coding environments. Since the impact of most Web technologies ultimately depends on how well and rapidly Web developers can make use of them, it is useful to consider what impact coding AI Agents might have on how W3C's work gets as well received as possible in these new circumstances.
+One domain where AI Agents seem to be gaining rapid adoption is in coding environments. The impact of most Web technologies ultimately depends on how well and rapidly Web developers can make use of them: what impact coding AI Agents might have on adoption of W3C's work?
 
 Today, the following elements are parts of the adoption path for developers:
 
@@ -129,22 +129,23 @@ Today, the following elements are parts of the adoption path for developers:
 * Availability of supporting libraries and frameworks,  
 * Ease of integration into existing systems (e.g. a payment technology needs to work with existing payment workflows).
 
-Coding AI Agents can provide increased visibility and support in almost any of these elements:
+Coding AI Agents already and will soon be able to:
+* Propose specific technologies or features (or even code) to accomplish a given task.
+* Propose or annotate code based on information on available implementations and the expected deployment target.  
+* Summarize technical documentation tailored for a give context, or create a training program.
+* Identify libraries and frameworks that help adopt a given feature (although their ability to do that at scale and without hallucinations remains uncertain).
+* Guide feature integration within an existing workflow or system based on the patterns it might have identified in its training set.
 
-* Prompts can help surface what specific technologies and features are relevant to accomplish a task, or AI Agents can provide direct code that make use of these.  
-* AI Agents can propose or annotate code based on information on available implementations informed by the expected deployment target.  
-* AI Agents can summarize or surface relevant technical documentation in context, and can help structure, adapt and run a  training program on a specific technology,  
-* AI Agents already provide supercharged capabilities in terms of code completion, templates and refactoring, now extending to extensive code production,  
-* AI Agents could presumably help identify libraries and frameworks that help adopt a given feature, although their ability to do that at scale and without hallucinations remains uncertain,  
-* Likewise, AI Agents can provide specific guidance to integrate a given feature within an existing workflow or system based on the patterns it might have identified in its training set.
+As with any other domain, the utility and quality of AI tools for coding with Web technology depends on **accurate**, **up-to-date** information. Because the Web is large, and constantly evolving without centralized control, relying on rapidly outdated materials incorporated at model training time may not yield good results. Instead, integrating curated information (e.g., using Model Context Protocol (MCP)) would ensure better outcomes.
 
-To fully realize these opportunities, it is critical to ensure that these AI Agents have access to **accurate** and **up-to-date** information about the said features, libraries and systems.
+Today's curated resources include:
+Today's curated resources include:
+* the [webref](https://github.com/w3c/webref/) project, a comprehensive repository of machine-readable data on browser technologies
+* the [web features project](https://github.com/web-platform-dx/web-features/), catalog of descriptions of all browser features which the [browser-compat-data](https://github.com/mdn/browser-compat-data/) allows to associate with actual shipping implementations
+* the [MDN documentation project](https://github.com/mdn/content/), curated technical reference documentation and training materials on these features, with a specific focus on accuracy, and integrating qualitative considerations about their usage (e.g., to support accessibility)
 
-Because that information tends to be fast evolving, relying on up-to-date material being incorporated in the training phase of the underlying models is unlikely to yield satisfactory results. It is much more likely that providing well-identified sources of quality information for Web technologies that agents could integrate using e.g. MCP would ensure a much better outcome.
 
-Some of these sources have already well-defined entry points: the [webref](https://github.com/w3c/webref/) project provides a comprehensive repository of machine-readable data on browser technologies, the [web features project](https://github.com/web-platform-dx/web-features/) catalogs a description of all browser features which the [browser-compat-data](https://github.com/mdn/browser-compat-data/) allows to associate with actual shipping implementations; the [MDN documentation project](https://github.com/mdn/content/) curates technical reference documentation and training materials on these features, with a specific focus on accuracy, and integrating qualitative considerations about their usage (e.g. to ensure their accessible use).
-
-Exploring whether these sources should be packaged and distributed in a way that would increase their impact on existing and emerging AI Agents may help increase quality adoption of new web technologies. It may also pave the way for a broader conversation on how technology ecosystems in general can best integrate with coding AI agents.
+Packaging and distributing these resources with greater focus on their impact on existing and emerging AI Agents may help increase quality adoption of new web technologies. It may also pave the way for a broader conversation on how to integrate AI agents into other technology ecosystems.
 
 Risks:
 
