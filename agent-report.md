@@ -50,7 +50,7 @@ Similar situations have arisen at different points of the Web history: the devel
 Risks:
 
 * Depletion of openly distributed Web content  
-* New intermediation between content producers and their users creates a disconnect in the feedback loop  
+* New intermediation between content producers and their users creates a disconnect in the feedback loop  and reduce brand recognition for content creators
 * Two-tier Web experiences for users with or without agents
 
 Opportunities:
