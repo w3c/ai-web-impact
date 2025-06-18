@@ -148,9 +148,9 @@ Exploring whether these sources should be packaged and distributed in a way that
 
 Risks:
 
-* 
+* Coding AI agents may suggest obsolete syntax, APIs, library versions, or other best practices
 
 Opportunities:
 
-* 
+* Coding AI assistants may make web development much more accessible
 
