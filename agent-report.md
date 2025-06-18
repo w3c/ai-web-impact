@@ -88,38 +88,32 @@ Opportunities:
 
 # AI Agents as Web User Agents
 
-As discussed above, AI Agents can be used to replace what end users would typically have used their browsers for when researching and gathering information online.
+Authentication managers, smart autocomplete, payments, and malware protection all illustrate how browser automation or semi-automation can make end users' lives on the Web  easier. In some cases, these capabilities blur the line between the browser and Web content. For example, in most browsers the URL bar is no longer just for URLs: users can type queries that are then fed to a search engine running on a Web site. This convenient UX leads many users to think that the user agent is performing the search, even though a Web site did so.
 
-This points towards a convergence that is actively being explored across several projects and organizations: AI Agents as complements or replacements for browsers as primary web user agents.
+As mentioned above, AI Agents may replace the typical search-and-browse approach, further blurring the browser/web content distinction when it comes to search. New automation enhancements such as enabling users to issue natural language commands to the browser or web site, and enacting complex workflows across pages and sites (incl. form filling and submission) will further blur the line, and more importantly, raise fundamental questions of trust.
 
-From an end user perspective, the primary value of AI Agents is likely to reside in their ability to remove or reduce friction, i.e. to automate tasks users are currently required to perform but do not perceive to benefit from.
+For example, LLM-based systems suffer from so-called "hallucinations" that may lead AI Agents to take nonsensical or harmful actions; depending on the sensitivity activity they would be automating, these hallucinations could create significant harm to the end users they're supposed to represent, with significant detrimental impact on the trust end users would have in agents, but also possibly in online systems in general.
 
-Browsers as they currently exist already compete on providing some of that support in their user interface: authentication managers, smart autocomplete, payment, malware protection are all illustration of automation or semi-automation that have been deployed to make users life easier.
+The inability to establish a robust boundary between prompts and other input in LLM-based systems has already allowed prompt-injection attacks in many contexts. In an environment as open as the Web, and from a context as sensitive as the one managed today by browsers, such attacks could cause serious harm to users (see also [AI in the Browser Threat Modeling](https://github.com/w3c-cg/threat-modeling/blob/simoneonofri-patch-2/models/ai-in-browser.md)).
 
-AI Agents bring a number of potential significant additional improvements given their ability to interpret natural language commands from users, natural language used on Web pages, and to enact complex workflows across pages and sites (incl. form filling and submission).
+A longstanding principle of Web architecture has been that the browser represents the user's interests. As the [W3C Technical Architecture Group (TAG) writes](https://w3ctag.github.io/user-agents/), "A user agent acts as an intermediary between a person (its user) and the web... The user agent serves the person as a trustworthy agent: it always puts that person's interest first." As AI Agents transform the browser landscape, how will they earn our trust?
 
-To take full advantage of these benefits, the following structural issues need to be addressed:
+Browsers have (to a large extent) earned user trust by performing "duties" on behalf of the user. Beyond any moral or legal considerations, these duties have played a critical role in enabling a flourishing ecosystem for both end users and content providers. The extent to which these duties can be applied in the less controlled environment induced by LLM-powered systems remains to be seen. For instance, browsers take pains to not expose the sites a user has already visited. Are there risks that an AI-based system would risk surfacing not only browsing history but maybe even prompt history?
 
-* LLM-based systems suffer from so-called "hallucinations" that may lead AI Agents to take nonsensical or harmful actions; depending on the sensitivity of the activity they would be automating, these hallucinations could create significant harm to the end users they're supposed to represent, with significant detrimental impact on the trust end users would have in agents, but also possibly in online systems in general.  
-* A critical architectural design of Web browsers to protect their end users is the sharp separation between browser-controlled UI (the so-called "chrome") and the interface created and managed by Web content. The inability to establish as robust a separation in LLM-based systems has already allowed prompt-injection attacks in many contexts; in an environment as open as the Web in a context as sensitive as the one controlled by browsers, the impact of these attacks would be potentially manyfold worse (see also [AI in the Browser Threat Modelling](https://github.com/w3c-cg/threat-modeling/blob/simoneonofri-patch-2/models/ai-in-browser.md)).  
-* Over time, web browsers have adopted (more or less robustly) a series of duties they are expected to follow, as the W3C Technical Architecture Group is in the [process of documenting](https://w3ctag.github.io/user-agents/). Beyond any moral or legal considerations, these duties have played a critical role in enabling a flourishing ecosystem for both end users and content providers. The extent to which these duties can be applied in the less controlled environment induced by LLM-powered systems remains to be determined; for instance, browsers take great pain to avoid exposing what sites a user has already visited \- are there risks that an AI-based system would risk surfacing not only browsing history but maybe even prompt history?  
+Generally speaking, the current user experience of web browsers tells a relatively clear liability story: when something goes wrong we can tell whether there was user error, browser software error, or the problem lays with the Web site. When an AI agent takes more of the end user tasks and operates through a less deterministic model than a web browser, there is a significant risk of exposing users to an unreliable and untrustworthy platform. The risk will likely be compounded as the user's AI agents interact with a Web site's AI agents.
 
-Generally speaking, the current user experience of web browsers provides a relatively clear liability story, where the end user, the browser and the content can be assigned blame when something goes wrong. In a world where an AI agent takes more of the end user tasks and operates through a less deterministic model than a web browser, possibly to interact with content itself managed by an AI agent with its own limitations, the risk of exposing users to an unreliable and untrustworthy platform is significant.
+Another assumption that AI web user agents are proving fragile is the relatively clean delineation between browsers and crawlers. When crawlers emerged in the early days of the Web, the impact of their automated web page access on web servers led to the creation of the `robots.txt` proposal indicating which pages to crawl and limiting the frequency of access. In practice, there were only so many crawlers deployed at web scale that this proved sufficient in keeping the induced load on servers manageable.
 
-Another assumption that these AI web user agents have already started breaking is the relatively clean delineation between end-user operated agents and crawlers. When crawlers emerged in the early days of the Web, the impact of their automated web page access on web servers led to the creation of the robots.txt proposal indicating which pages to crawl and limiting the frequency of access. In practice, there were only so many crawlers deployed at web scale that this proved sufficient in keeping the induced load on servers manageable.
-
-AI agents conducting e.g. deep research tasks for the end users can fetch many pages in quick succession in a completely distributed fashion across the population of end users \- as for instance a number of open source project documentation web sites have recently experienced, to their detriment.  
-Where robots.txt was meant to manage the impact of a few non-human directed crawlers, it is unlikely to be fit for purpose for widely distributed, user-directed agents, all the less so as they're unlikely to be recognizable as "robot" user agents given their nature as new generation of  browser.  
-This lack of clarity has made a number of anti-AI firewalls approaches emerge, which create friction and expand more resources \- clarifying the expected behaviors of this new type of content fetchers would not solve misbehaving actors, but would likely go a long way to reduce the overall cost on the ecosystem.  
+AI agents conducting deep research tasks for the end users can fetch many pages in quick succession in a completely distributed fashion across the population of end users (as recently painfully felt by a number of open source documentation  websites). Where `robots.txt` was meant to manage the impact of a few non-human directed crawlers, it is unlikely to be fit for purpose for widely distributed, user-directed crawling agents (which may not be easily recognizable as traditional crawlers). Without a standard in place for managing these interactions, anti-AI firewalls have started to emerge, which creates friction and requires more resources. We see standardization opportunities to support responsible actors that wish to work together to reduce ecosystem costs.
 
 Risks:
 
-* AI Agents weakens the ecosystem by ignoring lessons from Web user agents duties  
-* AI Agents get widely adopted before their security architecture make them safe 
+* AI Agents weakens the ecosystem by ignoring lessons from Web user agents duties
+* AI Agents get widely adopted before their security architecture make them safe
 
 Opportunities:
 
-* Define crawling behaviors for human-directed user agents  
+* Define crawling behaviors for human-directed user agents
 * AI Web Agents remove incentives behind high-friction Web user experience (ads, modals, permissions, …)
 
 # AI Agents and the Developer Experience
@@ -128,7 +122,7 @@ One domain where AI Agents seem to be gaining rapid adoption is in coding enviro
 
 Today, the following elements are parts of the adoption path for developers:
 
-* Awareness that the said technology or feature exists,  
+* Awareness that the said technology or feature exists,
 * Availability and quality of implementations, from experimental to shipped interoperably (as recognized e.g. by "[Baseline, widely available](https://web-platform-dx.github.io/web-features/)" label for Web features)  
 * Availability of documentation and training material,  
 * Availability of coding support (e.g. IDE autocompletion, templates, refactoring),  
