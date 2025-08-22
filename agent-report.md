@@ -136,7 +136,7 @@ Today, the following elements are parts of the adoption path for developers:
 Coding AI Agents already and will soon be able to:
 * Propose specific technologies or features (or even code) to accomplish a given task.
 * Propose or annotate code based on information on available implementations and the expected deployment target.  
-* Summarize technical documentation tailored for a give context, or create a training program.
+* Summarize technical documentation tailored for a given context, or create a training program.
 * Identify libraries and frameworks that help adopt a given feature (although their ability to do that at scale and without hallucinations remains uncertain).
 * Guide feature integration within an existing workflow or system based on the patterns it might have identified in its training set.
 
